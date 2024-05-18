@@ -33,13 +33,11 @@ public class UserRestApi {
         return service.findById(userId);
     }
     @PutMapping("update_user/{userId}")
-    public User updateUser(@RequestBody User user, @PathVariable Long userId)
-    {
+    public User updateUser(@RequestBody User user, @PathVariable Long userId){
         return service.updateUser(user, userId);
     }
     @DeleteMapping("delete_student/{userId}")
-    public void deleteUser(@PathVariable Long userId)
-    {
+    public void deleteUser(@PathVariable Long userId){
         service.deleteUser(userId);
     }
 }

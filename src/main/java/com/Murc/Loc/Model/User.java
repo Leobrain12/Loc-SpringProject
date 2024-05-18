@@ -7,7 +7,9 @@ package com.Murc.Loc.Model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,8 +19,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
+    private static final String SEQ_NAME = "user_seq";
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator =  SEQ_NAME)
+    @SequenceGenerator(name = SEQ_NAME, sequenceName = SEQ_NAME)
     private Long userId;
     private String firstName;
     private String lastName;
