@@ -4,7 +4,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
 import com.Murc.Loc.Controller.api.UserRestApi;
 import com.Murc.Loc.Model.User;
 import com.Murc.Loc.Service.UserService;

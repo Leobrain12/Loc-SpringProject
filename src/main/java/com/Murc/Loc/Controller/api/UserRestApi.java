@@ -36,7 +36,7 @@ public class UserRestApi {
     public User updateUser(@RequestBody User user, @PathVariable Long userId){
         return service.updateUser(user, userId);
     }
-    @DeleteMapping("delete_student/{userId}")
+    @DeleteMapping("delete_user/{userId}")
     public void deleteUser(@PathVariable Long userId){
         service.deleteUser(userId);
     }
