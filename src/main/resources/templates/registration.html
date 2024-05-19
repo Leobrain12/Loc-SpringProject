@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org">
+ <head>
+ <title>Регестрация</title>
+ </head>
+ <body>
+ <h1>Регестрация</h1>
+ <img th:src="@{images/default-avatar.png}"/>
+ <form method="POST" th:action="@{/register}" id="registerForm">
+ <label for="email">email: </label>
+ <input type="text" name="email"/><br/>
+ <label for="password">Пороль: </label>
+ <input type="password" name="password"/><br/>
+ <label for="confirm">Потвердите пороль</label>
+ <input type="password" name="confirm"/><br/>
+ <label for="firstName">Имя: </label>
+ <input type="text" name="firstName"/><br/>
+ <label for="lastName">Фамилия: </label>
+ <input type="text" name="lastName"/><br/>
+ <label for="telephone">telephone: </label>
+ <input type="text" name="telephone"/><br/>
+ <input type="submit" value="Register"/>
+ <label for="role">Роль: </label>
+ <select name="role" id="role" required>
+     <option value="USER">Пользователь</option>
+     <option value="EMPLOYER">Работодатель</option>
+     <option value="HR">HR</option>
+ </select>
+ </form>
+ </body>
+</html>
