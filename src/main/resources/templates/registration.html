@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Регистрация - Taco Cloud</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        select {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация</h1>
+        <form method="POST" th:action="@{/register}" id="registerForm">
+            <label for="email">Почта: </label>
+            <input type="text" name="email" id="email" required/>
+            
+            <label for="password">Пароль: </label>
+            <input type="password" name="password" id="password" required/>
+            
+            <label for="confirm">Подтверждение пароля: </label>
+            <input type="password" name="confirm" id="confirm" required/>
+            
+            <label for="firstName">Имя: </label>
+            <input type="text" name="firstName" id="firstName" required/>
+            
+            <label for="lastName">Фамилия: </label>
+            <input type="text" name="lastName" id="lastName" required/>
+            
+            <label for="telephone">Телефон: </label>
+            <input type="text" name="telephone" id="telephone" required/>
+            
+            <label for="role">Роль: </label>
+            <select name="role" id="role" required>
+                <option value="USER">Пользователь</option>
+                <option value="EMPLOYER">Работодатель</option>
+                <option value="HR">HR</option>
+            </select>
+            
+            <input type="submit" value="Регистрация"/>
+        </form>
+    </div>
+</body>
+</html>

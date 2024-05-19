@@ -7,4 +7,5 @@ import com.Murc.Loc.Model.*;
 public interface UserRepository extends JpaRepository<User,Long> {
     void deleteById(Long userId);
     User findByUserId(Long userId);
+    User findByEmail(String email);
 }
