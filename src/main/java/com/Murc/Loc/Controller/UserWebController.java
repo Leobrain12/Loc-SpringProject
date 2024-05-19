@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.Murc.Loc.Service.UserService;
 
+import lombok.RequiredArgsConstructor;
+
 @Controller
+@RequiredArgsConstructor
 public class UserWebController {
     
     private final UserService service;
 
-    public UserWebController(UserService service) {
-        this.service = service;
-    }
 
     @GetMapping("/users")
     public String getUsersPage(Model model) {

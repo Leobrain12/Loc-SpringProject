@@ -40,5 +40,10 @@ public class UserServiceIMPL implements UserService {
         return repository.findById(userId);
     }
 
+    @Override
+    public User findByEmail(String email) {
+        return repository.findByEmail(email);
+    }
+
 
 }

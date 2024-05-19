@@ -49,4 +49,10 @@ public class UserDao {
             USERS.remove(user);
         }
     }
+    public User findByEmail(String email){
+        return USERS.stream()
+            .filter(element -> element.getEmail().equals(email))
+            .findFirst()
+            .orElse(null);
+    }
 }

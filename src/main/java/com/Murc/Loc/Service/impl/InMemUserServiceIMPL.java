@@ -43,6 +43,12 @@ public class InMemUserServiceIMPL implements UserService  {
         return repository.findByUserId(userId);
     }
 
+
+    @Override
+    public User findByEmail(String email) {
+        return repository.findByEmail(email);
+    }
+
     
     
 }
