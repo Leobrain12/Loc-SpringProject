@@ -1,5 +1,5 @@
 package com.Murc.Loc.Model;
 
 public enum Role {
-    SEEKER, EMPLOYER, HR, ADMIN
+    USER, EMPLOYER, HR, ADMIN
 }
