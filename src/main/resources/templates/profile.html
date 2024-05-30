@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ebee;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .profile-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+        }
+        .profile-container img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .profile-container h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .profile-container p {
+            margin: 10px 0;
+            color: #666;
+        }
+        .profile-container button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .profile-container button:hover {
+            background-color: #45a049;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img th:src="@{/images/{image}(image=${user.image})}" alt="User image">
+        <h2 th:text="${user.firstName} + ' ' + ${user.lastName}"></h2>
+        <p>ID: <span th:text="${user.userId}"></span></p>
+        <p>Email: <span th:text="${user.email}"></span></p>
+        <p>Role: <span th:text="${user.role}"></span></p>
+        <p>Telephone: <span th:text="${user.telephone}"></span></p>
+        <p>Description: <span th:text="${user.description}"></span></p>
+        <button th:onclick="'editUser(' + ${user.userId} + ')'">Edit Profile</button>
+    </div>
+    <button class="back-button" onclick="window.history.back()">Back to Users List</button>
+    <script>
+        function editUser(userId) {
+            window.location.href = '/edit_user/' + userId;
+        }
+    </script>
+</body>
+</html>

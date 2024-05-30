@@ -6,53 +6,78 @@
     <title>Вход</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            color: #333;
         }
         .login-container {
             background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px; /* Добавлено для ограничения ширины контейнера */
-            width: 100%; /* Добавлено для уверенности в ширине */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
         }
         .login-container h2 {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            color: #007bff;
         }
         .form-group {
             margin-bottom: 20px;
         }
         .form-group label {
-            font-weight: bold;
+            font-weight: 600;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
         .form-group input {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ccc;
-            border-radius: 3px;
-            box-sizing: border-box; /* Добавлено для правильного расчета размеров элементов */
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
         }
         .form-group button {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             background-color: #007bff;
             color: #fff;
             border: none;
-            border-radius: 3px;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s;
         }
         .form-group button:hover {
             background-color: #0056b3;
+        }
+        .form-group a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .form-group a:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -61,15 +86,21 @@
         <h2>Вход</h2>
         <form action="/login" method="post">
             <div class="form-group">
-                <label for="email">Почта:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="username">Почта:</label>
+                <input type="email" id="username" name="username" required>
             </div>
             <div class="form-group">
-                <label for="password">Пороль:</label>
+                <label for="password">Пароль:</label>
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
                 <button type="submit">Войти</button>
+            </div>
+            <div th:if="${error}" class="error-message">
+                <p th:text="${error}">Неверное имя пользователя или пароль</p>
+            </div>
+            <div class="form-group">
+                <a href="/register">Регистрация</a>
             </div>
         </form>
     </div>

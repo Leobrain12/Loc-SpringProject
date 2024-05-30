@@ -1,0 +1,350 @@
+2024-05-31T00:41:39.901+03:00  INFO 50136 --- [restartedMain] com.Murc.Loc.LocApplication              : Starting LocApplication using Java 17.0.10 with PID 50136 (C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject\target\classes started by danii in C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject)
+2024-05-31T00:41:39.909+03:00 DEBUG 50136 --- [restartedMain] com.Murc.Loc.LocApplication              : Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-05-31T00:41:39.911+03:00  INFO 50136 --- [restartedMain] com.Murc.Loc.LocApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-31T00:41:39.976+03:00  INFO 50136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-31T00:41:39.977+03:00  INFO 50136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-31T00:41:41.432+03:00  INFO 50136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-31T00:41:41.513+03:00  INFO 50136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+2024-05-31T00:41:42.358+03:00  INFO 50136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-31T00:41:42.373+03:00  INFO 50136 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-31T00:41:42.374+03:00  INFO 50136 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-05-31T00:41:42.440+03:00  INFO 50136 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-31T00:41:42.441+03:00  INFO 50136 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2463 ms
+2024-05-31T00:41:42.632+03:00  INFO 50136 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-31T00:41:42.717+03:00  INFO 50136 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-05-31T00:41:42.766+03:00  INFO 50136 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-31T00:41:43.120+03:00  INFO 50136 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-31T00:41:43.160+03:00  INFO 50136 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-31T00:41:43.389+03:00  INFO 50136 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@76a3f816
+2024-05-31T00:41:43.392+03:00  INFO 50136 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-31T00:41:43.446+03:00  WARN 50136 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-31T00:41:44.720+03:00  INFO 50136 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-31T00:41:44.866+03:00  INFO 50136 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-31T00:41:45.269+03:00 DEBUG 50136 --- [restartedMain] c.M.Loc.Config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-05-31T00:41:45.398+03:00  INFO 50136 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-05-31T00:41:45.400+03:00  WARN 50136 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-05-31T00:41:45.503+03:00  WARN 50136 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-31T00:41:45.824+03:00  INFO 50136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ded7fcb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@370128eb, org.springframework.security.web.context.SecurityContextHolderFilter@1c51aa0a, org.springframework.security.web.header.HeaderWriterFilter@200b7303, org.springframework.web.filter.CorsFilter@12742547, org.springframework.security.web.authentication.logout.LogoutFilter@33c16a06, com.Murc.Loc.Config.JwtAuthenticationFilter@4ab70af1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7bd245fd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a500145, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7dc64b80, org.springframework.security.web.session.SessionManagementFilter@2f654fb7, org.springframework.security.web.access.ExceptionTranslationFilter@43fc78e3, org.springframework.security.web.access.intercept.AuthorizationFilter@2992788d]
+2024-05-31T00:41:46.141+03:00  INFO 50136 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-31T00:41:46.179+03:00  INFO 50136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-05-31T00:41:46.193+03:00  INFO 50136 --- [restartedMain] com.Murc.Loc.LocApplication              : Started LocApplication in 6.839 seconds (process running for 7.482)
+2024-05-31T00:42:17.393+03:00  INFO 50136 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-31T00:42:17.394+03:00  INFO 50136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-31T00:42:17.396+03:00  INFO 50136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-05-31T00:42:17.416+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:42:17.710+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:42:17.714+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:42:18.082+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:42:18.093+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:42:18.095+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:42:18.113+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:42:18.114+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:42:18.116+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:43:14.472+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:43:14.489+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:14.490+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:43:14.546+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:43:14.556+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:14.556+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:43:14.561+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:43:14.561+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:43:14.562+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:43:15.454+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:43:15.462+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:15.463+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:43:15.508+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:43:15.524+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:15.525+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:43:15.528+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:43:15.528+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:43:15.529+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:43:15.655+03:00 DEBUG 50136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:43:15.664+03:00 DEBUG 50136 --- [http-nio-8080-exec-8] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:15.665+03:00 DEBUG 50136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:43:15.718+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:43:15.727+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:15.728+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:43:15.731+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:43:15.731+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:43:15.732+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:43:15.837+03:00 DEBUG 50136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:43:15.844+03:00 DEBUG 50136 --- [http-nio-8080-exec-10] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:15.845+03:00 DEBUG 50136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:43:15.899+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:43:15.909+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:15.911+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:43:15.912+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:43:15.914+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:43:15.914+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:43:22.152+03:00 DEBUG 50136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:43:22.161+03:00 DEBUG 50136 --- [http-nio-8080-exec-3] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:22.162+03:00 DEBUG 50136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:43:22.218+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:43:22.226+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:22.227+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:43:22.229+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:43:22.230+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:43:22.230+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:43:22.733+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /login
+2024-05-31T00:43:22.742+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:22.743+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /login
+2024-05-31T00:43:22.820+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:43:22.831+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:22.831+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:43:22.834+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:43:22.834+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:43:22.835+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:43:24.504+03:00 DEBUG 50136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:43:24.514+03:00 DEBUG 50136 --- [http-nio-8080-exec-8] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:24.514+03:00 DEBUG 50136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:43:24.574+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:43:24.586+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:43:24.587+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:43:24.590+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:43:24.591+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:43:24.591+03:00 DEBUG 50136 --- [http-nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:45:53.926+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:45:53.937+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:45:53.938+03:00 DEBUG 50136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:45:54.077+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /images/
+2024-05-31T00:45:54.088+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:45:54.089+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /images/
+2024-05-31T00:45:54.092+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:45:54.094+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:45:54.095+03:00 DEBUG 50136 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:45:54.128+03:00 DEBUG 50136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:45:54.139+03:00 DEBUG 50136 --- [http-nio-8080-exec-3] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:45:54.140+03:00 DEBUG 50136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:45:54.144+03:00 DEBUG 50136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:45:54.145+03:00 DEBUG 50136 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:45:54.145+03:00 DEBUG 50136 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:46:24.859+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /profile/9
+2024-05-31T00:46:24.867+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:46:24.868+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /profile/9
+2024-05-31T00:46:24.871+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:46:24.872+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:46:24.872+03:00 DEBUG 50136 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:46:25.901+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:46:25.908+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:46:25.909+03:00 DEBUG 50136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:46:25.953+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /images/
+2024-05-31T00:46:25.962+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:46:25.963+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /images/
+2024-05-31T00:46:25.966+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:46:25.967+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:46:25.967+03:00 DEBUG 50136 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:46:26.010+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:46:26.021+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:46:26.021+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:46:26.024+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:46:26.026+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:46:26.026+03:00 DEBUG 50136 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:54:49.294+03:00  INFO 45024 --- [restartedMain] com.Murc.Loc.LocApplication              : Starting LocApplication using Java 17.0.10 with PID 45024 (C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject\target\classes started by danii in C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject)
+2024-05-31T00:54:49.296+03:00 DEBUG 45024 --- [restartedMain] com.Murc.Loc.LocApplication              : Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-05-31T00:54:49.298+03:00  INFO 45024 --- [restartedMain] com.Murc.Loc.LocApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-31T00:54:49.411+03:00  INFO 45024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-31T00:54:49.412+03:00  INFO 45024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-31T00:54:50.365+03:00  INFO 45024 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-31T00:54:50.464+03:00  INFO 45024 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 2 JPA repository interfaces.
+2024-05-31T00:54:51.614+03:00  INFO 45024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-31T00:54:51.640+03:00  INFO 45024 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-31T00:54:51.642+03:00  INFO 45024 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-05-31T00:54:51.742+03:00  INFO 45024 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-31T00:54:51.743+03:00  INFO 45024 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2329 ms
+2024-05-31T00:54:52.007+03:00  INFO 45024 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-31T00:54:52.127+03:00  INFO 45024 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-05-31T00:54:52.203+03:00  INFO 45024 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-31T00:54:52.786+03:00  INFO 45024 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-31T00:54:52.851+03:00  INFO 45024 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-31T00:54:53.218+03:00  INFO 45024 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@421e5a5e
+2024-05-31T00:54:53.221+03:00  INFO 45024 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-31T00:54:53.280+03:00  WARN 45024 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-31T00:54:54.747+03:00  INFO 45024 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-31T00:54:54.861+03:00  INFO 45024 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-31T00:54:55.340+03:00 DEBUG 45024 --- [restartedMain] c.M.Loc.Config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-05-31T00:54:55.415+03:00  INFO 45024 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-05-31T00:54:55.417+03:00  WARN 45024 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-05-31T00:54:55.549+03:00  WARN 45024 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-31T00:54:56.167+03:00  INFO 45024 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@471dc6a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b81cb32, org.springframework.security.web.context.SecurityContextHolderFilter@18395043, org.springframework.security.web.header.HeaderWriterFilter@76e09d7c, org.springframework.web.filter.CorsFilter@2992788d, org.springframework.security.web.authentication.logout.LogoutFilter@66ae6db, com.Murc.Loc.Config.JwtAuthenticationFilter@6f2fbd55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f654fb7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eaad59f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6248e317, org.springframework.security.web.session.SessionManagementFilter@5b69938e, org.springframework.security.web.access.ExceptionTranslationFilter@6500c91d, org.springframework.security.web.access.intercept.AuthorizationFilter@dde84e]
+2024-05-31T00:54:56.799+03:00  INFO 45024 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-31T00:54:56.855+03:00  INFO 45024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-05-31T00:54:56.868+03:00  INFO 45024 --- [restartedMain] com.Murc.Loc.LocApplication              : Started LocApplication in 8.08 seconds (process running for 8.647)
+2024-05-31T00:54:57.046+03:00  INFO 45024 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-31T00:54:57.047+03:00  INFO 45024 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-31T00:54:57.049+03:00  INFO 45024 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-05-31T00:54:57.069+03:00 DEBUG 45024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:54:57.302+03:00 DEBUG 45024 --- [http-nio-8080-exec-2] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:54:57.305+03:00 DEBUG 45024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:54:57.645+03:00 DEBUG 45024 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /images/
+2024-05-31T00:54:57.655+03:00 DEBUG 45024 --- [http-nio-8080-exec-1] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:54:57.656+03:00 DEBUG 45024 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /images/
+2024-05-31T00:54:57.674+03:00 DEBUG 45024 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:54:57.675+03:00 DEBUG 45024 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:54:57.677+03:00 DEBUG 45024 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:54:57.723+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:54:57.735+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:54:57.736+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:54:57.740+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:54:57.740+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:54:57.741+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:54:58.471+03:00 DEBUG 45024 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /profile/9
+2024-05-31T00:54:58.479+03:00 DEBUG 45024 --- [http-nio-8080-exec-4] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:54:58.480+03:00 DEBUG 45024 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /profile/9
+2024-05-31T00:54:58.532+03:00 DEBUG 45024 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/
+2024-05-31T00:54:58.541+03:00 DEBUG 45024 --- [http-nio-8080-exec-5] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:54:58.542+03:00 DEBUG 45024 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/
+2024-05-31T00:54:58.546+03:00 DEBUG 45024 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:54:58.547+03:00 DEBUG 45024 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:54:58.547+03:00 DEBUG 45024 --- [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:54:58.577+03:00 DEBUG 45024 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:54:58.601+03:00 DEBUG 45024 --- [http-nio-8080-exec-6] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:54:58.601+03:00 DEBUG 45024 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:54:58.603+03:00 DEBUG 45024 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:54:58.604+03:00 DEBUG 45024 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:54:58.604+03:00 DEBUG 45024 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:55:57.869+03:00 DEBUG 45024 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:55:57.879+03:00 DEBUG 45024 --- [http-nio-8080-exec-7] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:55:57.879+03:00 DEBUG 45024 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:55:57.911+03:00 DEBUG 45024 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /images/
+2024-05-31T00:55:57.920+03:00 DEBUG 45024 --- [http-nio-8080-exec-8] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:55:57.921+03:00 DEBUG 45024 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /images/
+2024-05-31T00:55:57.924+03:00 DEBUG 45024 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:55:57.926+03:00 DEBUG 45024 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:55:57.927+03:00 DEBUG 45024 --- [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:55:57.951+03:00 DEBUG 45024 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:55:57.960+03:00 DEBUG 45024 --- [http-nio-8080-exec-9] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:55:57.961+03:00 DEBUG 45024 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:55:57.964+03:00 DEBUG 45024 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:55:57.965+03:00 DEBUG 45024 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:55:57.965+03:00 DEBUG 45024 --- [http-nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:55:58.902+03:00 DEBUG 45024 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /login
+2024-05-31T00:55:58.910+03:00 DEBUG 45024 --- [http-nio-8080-exec-10] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:55:58.911+03:00 DEBUG 45024 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /login
+2024-05-31T00:55:58.968+03:00 DEBUG 45024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:55:58.975+03:00 DEBUG 45024 --- [http-nio-8080-exec-2] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:55:58.977+03:00 DEBUG 45024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:55:58.979+03:00 DEBUG 45024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:55:58.980+03:00 DEBUG 45024 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:55:58.980+03:00 DEBUG 45024 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:56:00.272+03:00 DEBUG 45024 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-05-31T00:56:00.281+03:00 DEBUG 45024 --- [http-nio-8080-exec-1] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:56:00.282+03:00 DEBUG 45024 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-05-31T00:56:00.323+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /images/
+2024-05-31T00:56:00.332+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:56:00.332+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /images/
+2024-05-31T00:56:00.335+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:56:00.336+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:56:00.336+03:00 DEBUG 45024 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T00:56:00.531+03:00 DEBUG 45024 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-05-31T00:56:00.538+03:00 DEBUG 45024 --- [http-nio-8080-exec-4] c.M.Loc.Config.JwtAuthenticationFilter   : JWT token is valid, set authentication for user daniilzelen@gmail.com
+2024-05-31T00:56:00.538+03:00 DEBUG 45024 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-05-31T00:56:00.540+03:00 DEBUG 45024 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-05-31T00:56:00.540+03:00 DEBUG 45024 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-05-31T00:56:00.541+03:00 DEBUG 45024 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-05-31T01:47:50.306+03:00  INFO 45024 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (1 addition, 1 deletion, 3 modifications)
+2024-05-31T01:47:50.327+03:00  INFO 45024 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-31T01:47:50.330+03:00  INFO 45024 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-05-31T01:47:50.333+03:00  INFO 45024 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-05-31T01:47:50.447+03:00  INFO 45024 --- [restartedMain] com.Murc.Loc.LocApplication              : Starting LocApplication using Java 17.0.10 with PID 45024 (C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject\target\classes started by danii in C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject)
+2024-05-31T01:47:50.448+03:00 DEBUG 45024 --- [restartedMain] com.Murc.Loc.LocApplication              : Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-05-31T01:47:50.448+03:00  INFO 45024 --- [restartedMain] com.Murc.Loc.LocApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-31T01:47:50.737+03:00  INFO 45024 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-31T01:47:50.761+03:00  INFO 45024 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2024-05-31T01:47:50.913+03:00  INFO 45024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-31T01:47:50.914+03:00  INFO 45024 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-31T01:47:50.914+03:00  INFO 45024 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-05-31T01:47:50.941+03:00  INFO 45024 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-31T01:47:50.942+03:00  INFO 45024 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 491 ms
+2024-05-31T01:47:50.990+03:00  INFO 45024 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-31T01:47:50.994+03:00  INFO 45024 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-31T01:47:51.006+03:00  INFO 45024 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-31T01:47:51.009+03:00  INFO 45024 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-05-31T01:47:51.058+03:00  INFO 45024 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1e974d65
+2024-05-31T01:47:51.059+03:00  INFO 45024 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-05-31T01:47:51.072+03:00  WARN 45024 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-31T01:47:51.213+03:00  INFO 45024 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-31T01:47:51.311+03:00  INFO 45024 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-31T01:47:51.392+03:00 DEBUG 45024 --- [restartedMain] c.M.Loc.Config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-05-31T01:47:51.414+03:00  INFO 45024 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-05-31T01:47:51.415+03:00  WARN 45024 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-05-31T01:47:51.422+03:00  WARN 45024 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vacancyRestApi': Resolution of declared constructors on bean Class [com.Murc.Loc.Controller.api.VacancyRestApi] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@d5b66bb] failed
+2024-05-31T01:47:51.422+03:00  INFO 45024 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-31T01:47:51.423+03:00  INFO 45024 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-05-31T01:47:51.432+03:00  INFO 45024 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-05-31T01:47:51.434+03:00  INFO 45024 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-05-31T01:47:51.442+03:00  INFO 45024 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-05-31T01:47:51.472+03:00 ERROR 45024 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vacancyRestApi': Resolution of declared constructors on bean Class [com.Murc.Loc.Controller.api.VacancyRestApi] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@d5b66bb] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:383) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1296) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.Murc.Loc.LocApplication.main(LocApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+Caused by: java.lang.NoClassDefFoundError: VacancyService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructors(Unknown Source) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:378) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: VacancyService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	... 27 common frames omitted
+
+2024-05-31T02:01:29.587+03:00  INFO 17360 --- [restartedMain] com.Murc.Loc.LocApplication              : Starting LocApplication using Java 17.0.10 with PID 17360 (C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject\target\classes started by danii in C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject)
+2024-05-31T02:01:29.590+03:00 DEBUG 17360 --- [restartedMain] com.Murc.Loc.LocApplication              : Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-05-31T02:01:29.591+03:00  INFO 17360 --- [restartedMain] com.Murc.Loc.LocApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-31T02:01:29.644+03:00  INFO 17360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-31T02:01:29.645+03:00  INFO 17360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-31T02:01:30.570+03:00  INFO 17360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-31T02:01:30.645+03:00  INFO 17360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2024-05-31T02:01:31.442+03:00  INFO 17360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-31T02:01:31.459+03:00  INFO 17360 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-31T02:01:31.460+03:00  INFO 17360 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-05-31T02:01:31.525+03:00  INFO 17360 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-31T02:01:31.526+03:00  INFO 17360 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1881 ms
+2024-05-31T02:01:31.690+03:00  INFO 17360 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-31T02:01:31.776+03:00  INFO 17360 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-05-31T02:01:31.827+03:00  INFO 17360 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-31T02:01:32.202+03:00  INFO 17360 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-31T02:01:32.233+03:00  INFO 17360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-31T02:01:32.509+03:00  INFO 17360 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a3ef99f
+2024-05-31T02:01:32.512+03:00  INFO 17360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-31T02:01:32.559+03:00  WARN 17360 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-31T02:01:33.593+03:00  INFO 17360 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-31T02:01:33.701+03:00  INFO 17360 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-31T02:01:34.053+03:00 DEBUG 17360 --- [restartedMain] c.M.Loc.Config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-05-31T02:01:34.114+03:00  INFO 17360 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-05-31T02:01:34.115+03:00  WARN 17360 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-05-31T02:01:34.206+03:00  WARN 17360 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-31T02:01:34.538+03:00  INFO 17360 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5fa76028, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15cd1f4f, org.springframework.security.web.context.SecurityContextHolderFilter@20a71bc4, org.springframework.security.web.header.HeaderWriterFilter@20e33818, org.springframework.web.filter.CorsFilter@659fa9e0, org.springframework.security.web.authentication.logout.LogoutFilter@7c626593, com.Murc.Loc.Config.JwtAuthenticationFilter@615a24c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c5507ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70cbba88, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53a8de88, org.springframework.security.web.session.SessionManagementFilter@1c28a50a, org.springframework.security.web.access.ExceptionTranslationFilter@31510b11, org.springframework.security.web.access.intercept.AuthorizationFilter@7dc6fcd7]
+2024-05-31T02:01:34.825+03:00  INFO 17360 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-31T02:01:34.861+03:00  INFO 17360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-05-31T02:01:34.873+03:00  INFO 17360 --- [restartedMain] com.Murc.Loc.LocApplication              : Started LocApplication in 5.754 seconds (process running for 6.247)

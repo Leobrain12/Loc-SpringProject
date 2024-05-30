@@ -72,11 +72,11 @@
     <div class="users-container">
         <div class="user-card" th:each="user : ${users}">
             <img th:src="@{/images/{image}(image=${user.image})}" alt="User image">
-            <h2 th:text="${user.firstName}"></h2>
+            <h2 th:text="${user.firstName} + ' ' + ${user.lastName}"></h2>
             <p>ID: <span th:text="${user.userId}"></span></p>
             <p>Email: <span th:text="${user.email}"></span></p>
             <p>Role: <span th:text="${user.role}"></span></p>
-            <button>View Profile</button>
+            <button th:onclick="'viewProfile(' + ${user.userId} + ')'">View Profile</button>
             <button class="delete" th:onclick="'deleteUser(' + ${user.userId} + ')'">Delete</button>
         </div>
     </div>
@@ -97,6 +97,10 @@
                     }
                 });
             }
+        }
+
+        function viewProfile(userId) {
+            window.location.href = '/profile/' + userId;
         }
     </script>
 </body>

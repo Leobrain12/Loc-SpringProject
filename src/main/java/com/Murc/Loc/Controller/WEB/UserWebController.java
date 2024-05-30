@@ -1,4 +1,4 @@
-package com.Murc.Loc.Controller;
+package com.Murc.Loc.Controller.WEB;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

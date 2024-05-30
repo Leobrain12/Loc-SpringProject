@@ -3,6 +3,7 @@ import java.util.List;
 
 import com.Murc.Loc.Model.Vacancy;
 
+
 public interface VacancyService {
     List<Vacancy> findAllVacancy();
     Vacancy saveVacancy(Vacancy newVacancy);

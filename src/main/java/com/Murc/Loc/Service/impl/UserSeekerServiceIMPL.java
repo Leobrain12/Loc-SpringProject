@@ -3,6 +3,7 @@ package com.Murc.Loc.Service.impl;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+
 import com.Murc.Loc.Service.VacancyService;
 
 import lombok.AllArgsConstructor;
@@ -11,7 +12,7 @@ import com.Murc.Loc.Model.*;
 import com.Murc.Loc.Repository.DAO.VacancyDao;;
 @Service
 @AllArgsConstructor
-public class VacancyServiceIMPL implements VacancyService {
+public class UserSeekerServiceIMPL implements VacancyService {
     private final VacancyDao repository;
 
 
