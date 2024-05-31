@@ -1,44 +1,60 @@
 package com.Murc.Loc.Controller.api;
 
 import java.util.List;
+import java.util.Set;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.*;
 
 import com.Murc.Loc.Model.Vacancy;
 import com.Murc.Loc.Service.VacancyService;
+import com.Murc.Loc.Service.UserService;
+import com.Murc.Loc.Model.User;
 
 import lombok.AllArgsConstructor;
+
 @RestController
 @RequestMapping("/api/vacancy")
 @AllArgsConstructor
 public class VacancyRestApi {
-    private final VacancyService service;
+    private final VacancyService vacancyService;
+    private final UserService userService;
+
     @GetMapping
-    public List<Vacancy> findAllVacancy(){
-        return service.findAllVacancy();
+    public List<Vacancy> findAllVacancy() {
+        return vacancyService.findAllVacancy();
     }
+
     @PostMapping("save")
-    public Vacancy saveUser(@RequestBody Vacancy newVacancy){
-        return service.saveVacancy(newVacancy);
+    public Vacancy saveVacancy(@RequestBody Vacancy newVacancy) {
+        return vacancyService.saveVacancy(newVacancy);
     }
+
     @GetMapping("/{vacancyId}")
-    public Vacancy findById(@PathVariable Long vacancyId){
-        return service.findById(vacancyId);
+    public Vacancy findById(@PathVariable Long vacancyId) {
+        return vacancyService.findById(vacancyId);
     }
+
     @PutMapping("update/{vacancyId}")
-    public Vacancy updateUser(@RequestBody Vacancy vacancy, @PathVariable Long vacancyId){
-        return service.updateVacancy(vacancy, vacancyId);
+    public Vacancy updateVacancy(@RequestBody Vacancy vacancy, @PathVariable Long vacancyId) {
+        return vacancyService.updateVacancy(vacancy, vacancyId);
     }
+
     @DeleteMapping("delete/{vacancyId}")
-    public void deleteVacancy(@PathVariable Long vacancyId){
-        service.deleteVacancy(vacancyId);
+    public void deleteVacancy(@PathVariable Long vacancyId) {
+        vacancyService.deleteVacancy(vacancyId);
+    }
+
+    @PostMapping("/favorite/{vacancyId}")
+    public void addFavorite(@PathVariable Long vacancyId, @AuthenticationPrincipal UserDetails userDetails) {
+        User user = userService.findByEmail(userDetails.getUsername()).orElseThrow(() -> new RuntimeException("User not found"));
+        userService.addFavoriteVacancy(user, vacancyId);
+    }
+
+    @GetMapping("/favorites")
+    public Set<Vacancy> getFavorites(@AuthenticationPrincipal UserDetails userDetails) {
+        User user = userService.findByEmail(userDetails.getUsername()).orElseThrow(() -> new RuntimeException("User not found"));
+        return user.getFavoriteVacancies();
     }
 }
-

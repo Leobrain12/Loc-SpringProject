@@ -3,6 +3,7 @@ package com.Murc.Loc.Service.impl;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.Murc.Loc.Service.VacancyService;
 
@@ -12,10 +13,8 @@ import com.Murc.Loc.Model.*;
 import com.Murc.Loc.Repository.DAO.VacancyDao;;
 @Service
 @AllArgsConstructor
-public class UserSeekerServiceIMPL implements VacancyService {
+public class VacancyServiceIMPL implements VacancyService {
     private final VacancyDao repository;
-
-
 
     @Override
     public Vacancy findById(Long Id) {
@@ -41,7 +40,5 @@ public class UserSeekerServiceIMPL implements VacancyService {
     public void deleteVacancy(Long Id) {
         repository.deleteUser(Id);
     }
-
-
 }
 

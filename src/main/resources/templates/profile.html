@@ -50,7 +50,32 @@
         .profile-container button:hover {
             background-color: #45a049;
         }
-        .back-button {
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .success-message {
+            color: green;
+            margin-top: 20px;
+        }
+        .favorites-button {
             margin-top: 20px;
             padding: 10px 20px;
             background-color: #007bff;
@@ -59,26 +84,80 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .back-button:hover {
+        .favorites-button:hover {
+            background-color: #0056b3;
+        }
+        .view-vacancies-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .view-vacancies-button:hover {
+            background-color: #0056b3;
+        }
+        .menu {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .menu button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .menu button:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="profile-container">
-        <img th:src="@{/images/{image}(image=${user.image})}" alt="User image">
-        <h2 th:text="${user.firstName} + ' ' + ${user.lastName}"></h2>
-        <p>ID: <span th:text="${user.userId}"></span></p>
-        <p>Email: <span th:text="${user.email}"></span></p>
-        <p>Role: <span th:text="${user.role}"></span></p>
-        <p>Telephone: <span th:text="${user.telephone}"></span></p>
-        <p>Description: <span th:text="${user.description}"></span></p>
-        <button th:onclick="'editUser(' + ${user.userId} + ')'">Edit Profile</button>
+    <div class="menu">
+        <button onclick="window.location.href='/profile'">Профиль</button>
+        <button onclick="window.location.href='/profile/favorites'">Избранные вакансии</button>
+        <button onclick="window.location.href='/vacancies'">Вакансии</button>
+        <button onclick="window.location.href='/users'">Все пользователи</button>
+        <button onclick="window.location.href='/logout'">Выйти</button>
     </div>
-    <button class="back-button" onclick="window.history.back()">Back to Users List</button>
+    <div class="profile-container">
+        <img id="user-image" th:src="@{'/uploads/' + ${user.image}}" alt="User image">
+        <h2 th:text="${user.firstName} + ' ' + ${user.lastName}"></h2>
+        <form action="/profile/update" method="post">
+            <div class="form-group">
+                <label for="firstName">Имя:</label>
+                <input type="text" id="firstName" name="firstName" th:value="${user.firstName}" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Фамилия:</label>
+                <input type="text" id="lastName" name="lastName" th:value="${user.lastName}" required>
+            </div>
+            <div class="form-group">
+                <label for="telephone">Телефон:</label>
+                <input type="text" id="telephone" name="telephone" th:value="${user.telephone}">
+            </div>
+            <div class="form-group">
+                <label for="description">Описание:</label>
+                <textarea id="description" name="description" rows="4" th:text="${user.description}"></textarea>
+            </div>
+            <button type="submit">Сохранить изменения</button>
+        </form>
+        <div th:if="${successMessage}" class="success-message">
+            <p th:text="${successMessage}"></p>
+        </div>
+    </div>
     <script>
-        function editUser(userId) {
-            window.location.href = '/edit_user/' + userId;
+        document.getElementById('user-image').onerror = function() {
+            this.onerror = null;
+            this.src = '/images/default-avatar.png';
         }
     </script>
 </body>

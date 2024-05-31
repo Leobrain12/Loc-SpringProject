@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Пользователи</title>
+    <title>Vacancies</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -18,12 +18,12 @@
             color: #333;
             padding: 20px;
         }
-        .users-container {
+        .vacancies-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .user-card {
+        .vacancy-card {
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -32,38 +32,32 @@
             width: 300px;
             text-align: center;
         }
-        .user-card img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
+        .vacancy-card img {
+            border-radius: 10px;
+            width: 100%;
+            height: 150px;
             object-fit: cover;
             margin-bottom: 15px;
         }
-        .user-card h2 {
+        .vacancy-card h2 {
             margin: 10px 0;
             color: #333;
         }
-        .user-card p {
+        .vacancy-card p {
             margin: 5px 0;
             color: #666;
         }
-        .user-card button {
+        .vacancy-card button {
             margin-top: 10px;
             padding: 10px 20px;
-            background-color: #4CAF50;
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-        .user-card button.delete {
-            background-color: #f44336;
-        }
-        .user-card button:hover {
-            background-color: #45a049;
-        }
-        .user-card button.delete:hover {
-            background-color: #e53935;
+        .vacancy-card button:hover {
+            background-color: #0056b3;
         }
         .menu {
             position: absolute;
@@ -94,44 +88,17 @@
         <button onclick="window.location.href='/users'">Все пользователи</button>
         <button onclick="window.location.href='/logout'">Выйти</button>
     </div>
-    <h1>Пользователи</h1>
-    <div class="users-container">
-        <div class="user-card" th:each="user : ${users}">
-            <img class="user-image" th:src="@{'/uploads/' + ${user.image}}" alt="User image">
-            <h2 th:text="${user.firstName} + ' ' + ${user.lastName}"></h2>
-            <p>Почта: <span th:text="${user.email}"></span></p>
-            <button th:onclick="'viewProfile(' + ${user.userId} + ')'">Показать профиль</button>
-            <button class="delete" th:onclick="'deleteUser(' + ${user.userId} + ')'">Удалить</button>
+    <h1>Vacancies</h1>
+    <div class="vacancies-container">
+        <div class="vacancy-card" th:each="vacancy : ${vacancies}">
+            <img th:src="@{'/uploads/' + ${vacancy.image}}" alt="Vacancy image">
+            <h2 th:text="${vacancy.name}"></h2>
+            <p th:text="${vacancy.description}"></p>
+            <p>Skills: <span th:each="skill : ${vacancy.skills}" th:text="${skill}">Skill</span></p>
+            <form th:action="@{/vacancies/favorite/{vacancyId}(vacancyId=${vacancy.vacancyId})}" method="post">
+                <button type="submit">Add to Favorites</button>
+            </form>
         </div>
     </div>
-    <script>
-        document.querySelectorAll('.user-image').forEach(img => {
-            img.onerror = function() {
-                this.onerror = null;
-                this.src = '/images/default-avatar.png';
-            }
-        });
-        function deleteUser(userId) {
-            if (confirm('Are you sure you want to delete this user?')) {
-                fetch(`/api/user/delete_user/${userId}`, {
-                    method: 'DELETE',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        window.location.reload();
-                    } else {
-                        alert('Error deleting user');
-                    }
-                });
-            }
-        }
-
-        function viewProfile(userId) {
-            window.location.href = '/profile/' + userId;
-        }
-    </script>
 </body>
 </html>

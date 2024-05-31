@@ -1,6 +1,8 @@
 package com.Murc.Loc.Service.impl;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.stereotype.Service;
 
@@ -38,6 +40,29 @@ public class UserServiceIMPL implements UserService {
     @Override
     public User findById(Long userId) {
         return repository.findById(userId);
+    }
+
+    @Override
+    public Optional<User> findByEmail(String email) {
+        /*
+            TODO: Заменить этот временный код на полноценную реализацию
+        */
+        return null;
+    }
+
+    @Override
+    public void addFavoriteVacancy(User user, Long vacancyId) {
+        /*
+            TODO: Заменить этот временный код на полноценную реализацию
+        */
+    }
+
+    @Override
+    public Set<Vacancy> getFavoriteVacancies(User user) {
+        /*
+            TODO: Заменить этот временный код на полноценную реализацию
+        */
+        return null;
     }
 
 

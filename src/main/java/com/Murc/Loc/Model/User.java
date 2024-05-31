@@ -1,7 +1,9 @@
 package com.Murc.Loc.Model;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -43,6 +45,14 @@ public class User implements UserDetails {
     private String image;
     private String description;
     private Long zoneId;
+
+    @ManyToMany
+    @JoinTable(
+        name = "user_favorite_vacancies",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "vacancy_id")
+    )
+    private Set<Vacancy> favoriteVacancies = new HashSet<>();
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
