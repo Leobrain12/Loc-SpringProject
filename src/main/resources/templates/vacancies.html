@@ -35,7 +35,7 @@
         .vacancy-card img {
             border-radius: 10px;
             width: 100%;
-            height: 150px;
+            height: auto;
             object-fit: cover;
             margin-bottom: 15px;
         }
@@ -108,9 +108,9 @@
             <img th:src="${vacancy.image != null ? '/uploads/' + vacancy.image : '/images/default-avatar.png'}" alt="Vacancy image">
             <h2 th:text="${vacancy.name}"></h2>
             <p th:text="${vacancy.description}"></p>
-            <p>Skills: <span th:each="skill : ${vacancy.skills}" th:text="${skill}">Skill</span></p>
+            <p>Навыки: <span th:text="${#strings.arrayJoin(vacancy.skills, ', ')}"></span></p>
             <form th:action="@{/vacancies/favorite/{vacancyId}(vacancyId=${vacancy.vacancyId})}" method="post">
-                <button type="submit">Add to Favorites</button>
+                <button type="submit">Добавить в избранное</button>
             </form>
         </div>
     </div>
