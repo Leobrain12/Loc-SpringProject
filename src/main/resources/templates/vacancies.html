@@ -91,6 +91,46 @@
         .add-vacancy-button:hover {
             background-color: #218838;
         }
+        .filter-form {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .filter-form .form-group {
+            flex: 1;
+            margin: 10px;
+        }
+        .filter-form .form-group input,
+        .filter-form .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            box-sizing: border-box;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .pagination a:hover {
+            background-color: #0056b3;
+        }
+        .pagination a.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
     </style>
     <script>
         function deleteVacancy(vacancyId) {
@@ -135,6 +175,25 @@
     </div>
     <h1>Vacancies</h1>
     <button class="add-vacancy-button" onclick="window.location.href='/vacancies/add'">Добавить вакансию</button>
+
+    <form class="filter-form" action="/vacancies" method="get">
+        <div class="form-group">
+            <input type="text" name="experience" placeholder="Опыт" th:value="${experience}">
+        </div>
+        <div class="form-group">
+            <input type="text" name="skill" placeholder="Навыки" th:value="${skill}">
+        </div>
+        <div class="form-group">
+            <input type="text" name="description" placeholder="Описание" th:value="${description}">
+        </div>
+        <div class="form-group">
+            <input type="date" name="createdAfter" placeholder="Дата создания" th:value="${#dates.format(createdAfter, 'yyyy-MM-dd')}">
+        </div>
+        <div class="form-group">
+            <button type="submit">Фильтровать</button>
+        </div>
+    </form>
+
     <div class="vacancies-container">
         <div class="vacancy-card" th:each="vacancy : ${vacancies}">
             <img th:src="${vacancy.image != null ? '/uploads/' + vacancy.image : '/images/default-avatar.png'}" alt="Vacancy image">
@@ -145,6 +204,13 @@
             <button th:attr="onclick=|window.location.href='/vacancy/details/' + ${vacancy.vacancyId}|">Посмотреть детали</button>
             <button th:attr="onclick=|addToFavorites(${vacancy.vacancyId})|">Добавить в избранное</button>
         </div>
+    </div>
+
+    <div class="pagination">
+        <a th:href="@{|/vacancies?page=0&size=${size}|}" th:classappend="${currentPage == 0} ? ' disabled'">Первая</a>
+        <a th:href="@{|/vacancies?page=${currentPage - 1}&size=${size}|}" th:classappend="${currentPage == 0} ? ' disabled'">Предыдущая</a>
+        <a th:href="@{|/vacancies?page=${currentPage + 1}&size=${size}|}" th:classappend="${currentPage + 1 == totalPages} ? ' disabled'">Следующая</a>
+        <a th:href="@{|/vacancies?page=${totalPages - 1}&size=${size}|}" th:classappend="${currentPage + 1 == totalPages} ? ' disabled'">Последняя</a>
     </div>
 </body>
 </html>

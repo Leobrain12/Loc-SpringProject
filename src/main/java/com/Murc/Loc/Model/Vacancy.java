@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -28,4 +29,6 @@ public class Vacancy {
     private String salary;
     private String experience;
     private int age;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdDate = new Date();
 }

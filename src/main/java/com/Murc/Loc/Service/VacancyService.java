@@ -1,8 +1,12 @@
 package com.Murc.Loc.Service;
 
+import com.Murc.Loc.Model.Vacancy;
+
 import java.util.List;
 
-import com.Murc.Loc.Model.Vacancy;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 
 public interface VacancyService {
     List<Vacancy> findAllVacancy();
@@ -10,4 +14,5 @@ public interface VacancyService {
     Vacancy updateVacancy(Vacancy vacancy, Long Id);
     void deleteVacancy(Long Id);
     Vacancy findById(Long Id);
+    Page<Vacancy> findVacancies(Specification<Vacancy> spec, Pageable pageable);
 }

@@ -3,10 +3,14 @@ package com.Murc.Loc.Controller.WEB;
 import com.Murc.Loc.Model.User;
 import com.Murc.Loc.Model.Vacancy;
 import com.Murc.Loc.Service.VacancyService;
+import com.Murc.Loc.Specification.VacancySpecification;
 import com.Murc.Loc.Service.UserService;
 import lombok.RequiredArgsConstructor;
 
-import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -17,28 +21,60 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
-import org.slf4j.Logger;
-
+import org.springframework.data.domain.Pageable;
 
 @Controller
 @RequiredArgsConstructor
 public class VacancyWebController {
-    private static final Logger logger = LoggerFactory.getLogger(VacancyWebController.class);
 
     private final VacancyService vacancyService;
     private final UserService userService;
 
     @GetMapping("/vacancies")
-    public String showVacancies(Model model) {
-        List<Vacancy> vacancies = vacancyService.findAllVacancy();
-        model.addAttribute("vacancies", vacancies);
+    public String showVacancies(
+            @RequestParam(required = false) String experience,
+            @RequestParam(required = false) String skill,
+            @RequestParam(required = false) String description,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date createdAfter,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            Model model) {
+
+        Pageable pageable = PageRequest.of(page, size);
+        Specification<Vacancy> spec = Specification.where(null);
+
+        if (experience != null && !experience.isEmpty()) {
+            spec = spec.and(VacancySpecification.hasExperience(experience));
+        }
+
+        if (skill != null && !skill.isEmpty()) {
+            spec = spec.and(VacancySpecification.hasSkills(skill));
+        }
+
+        if (description != null && !description.isEmpty()) {
+            spec = spec.and(VacancySpecification.hasDescriptionContaining(description));
+        }
+
+        if (createdAfter != null) {
+            spec = spec.and(VacancySpecification.createdAfter(createdAfter));
+        }
+
+        Page<Vacancy> vacancies = vacancyService.findVacancies(spec, pageable);
+        model.addAttribute("vacancies", vacancies.getContent());
+        model.addAttribute("totalPages", vacancies.getTotalPages());
+        model.addAttribute("currentPage", page);
+        model.addAttribute("experience", experience);
+        model.addAttribute("skill", skill);
+        model.addAttribute("description", description);
+        model.addAttribute("createdAfter", createdAfter);
+
         return "vacancies";
     }
 
@@ -92,7 +128,6 @@ public class VacancyWebController {
         vacancyService.saveVacancy(vacancy);
         return "redirect:/vacancies";
     }
-    
     
     private String saveFile(MultipartFile file) {
         String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();

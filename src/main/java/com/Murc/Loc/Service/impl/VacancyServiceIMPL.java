@@ -2,6 +2,9 @@ package com.Murc.Loc.Service.impl;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import com.Murc.Loc.Service.VacancyService;
@@ -38,6 +41,12 @@ public class VacancyServiceIMPL implements VacancyService {
     @Override
     public void deleteVacancy(Long Id) {
         repository.deleteUser(Id);
+    }
+
+    @Override
+    public Page<Vacancy> findVacancies(Specification<Vacancy> spec, Pageable pageable) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findVacancies'");
     }
 }
 
