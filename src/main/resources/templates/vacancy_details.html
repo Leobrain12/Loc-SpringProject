@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Избранные вакансии</title>
+    <title>Vacancy Details</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -14,41 +14,32 @@
             align-items: center;
             flex-direction: column;
         }
-        h1 {
-            color: #333;
-            padding: 20px;
-        }
-        .vacancies-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .vacancy-card {
+        .vacancy-details {
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 10px;
+            margin: 20px;
             padding: 20px;
-            width: 300px;
+            width: 600px;
             text-align: center;
         }
-        .vacancy-card img {
+        .vacancy-details img {
             border-radius: 10px;
             width: 100%;
             height: auto;
             object-fit: cover;
             margin-bottom: 15px;
         }
-        .vacancy-card h2 {
+        .vacancy-details h2 {
             margin: 10px 0;
             color: #333;
         }
-        .vacancy-card p {
+        .vacancy-details p {
             margin: 5px 0;
             color: #666;
         }
-        .vacancy-card button {
-            margin-top: 10px;
+        .vacancy-details .back-button {
+            margin-top: 20px;
             padding: 10px 20px;
             background-color: #007bff;
             color: white;
@@ -56,7 +47,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .vacancy-card button:hover {
+        .vacancy-details .back-button:hover {
             background-color: #0056b3;
         }
         .menu {
@@ -88,36 +79,15 @@
         <button onclick="window.location.href='/users'">Все пользователи</button>
         <button onclick="window.location.href='/logout'">Выйти</button>
     </div>
-    <h1>Избранные вакансии</h1>
-    <div class="vacancies-container">
-        <div class="vacancy-card" th:each="vacancy : ${favoriteVacancies}">
-            <img th:src="${vacancy.image != null ? '/uploads/' + vacancy.image : '/images/default-avatar.png'}" alt="Vacancy image">
-            <h2 th:text="${vacancy.name}"></h2>
-            <p th:text="${vacancy.description}"></p>
-            <p>
-                Навыки: <span th:each="skill, iterStat : ${vacancy.skills}" th:text="${skill} + ${iterStat.last ? '' : ', '}"></span>
-            </p>
-            <button th:attr="onclick=|deleteFavoriteVacancy(${vacancy.vacancyId})|">Удалить из избранных</button>
-        </div>
+    <div class="vacancy-details">
+        <img th:src="${vacancy.image != null ? '/uploads/' + vacancy.image : '/images/default-avatar.png'}" alt="Vacancy image">
+        <h2 th:text="${vacancy.name}"></h2>
+        <p th:text="${vacancy.description}"></p>
+        <p>Навыки: <span th:text="${#strings.arrayJoin(vacancy.skills, ', ')}"></span></p>
+        <p>Зарплата: <span th:text="${vacancy.salary}"></span></p>
+        <p>Опыт: <span th:text="${vacancy.experience}"></span></p>
+        <p>Возраст: <span th:text="${vacancy.age}"></span></p>
+        <button class="back-button" onclick="window.location.href='/vacancies'">Назад</button>
     </div>
-    <script>
-        function deleteFavoriteVacancy(vacancyId) {
-            if (confirm('Вы уверены, что хотите удалить эту вакансию из избранных?')) {
-                fetch(`/api/user/favorites/${vacancyId}`, {
-                    method: 'DELETE',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        window.location.reload();
-                    } else {
-                        alert('Ошибка при удалении вакансии из избранных');
-                    }
-                });
-            }
-        }
-    </script>
 </body>
 </html>

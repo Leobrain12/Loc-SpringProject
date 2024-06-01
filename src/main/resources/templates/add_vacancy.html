@@ -12,11 +12,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            box-sizing: border-box;
         }
         h1 {
             color: #343a40;
+            text-align: center;
             margin-bottom: 20px;
         }
         .menu {
@@ -38,45 +47,46 @@
         .menu button:hover {
             background-color: #0056b3;
         }
-        .form-container {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 100%;
-            max-width: 400px;
-            box-sizing: border-box;
+        .form-group {
+            margin-bottom: 15px;
         }
-        .form-container input,
-        .form-container textarea,
-        .form-container button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ced4da;
-            box-sizing: border-box;
-        }
-        .form-container textarea {
-            resize: vertical;
-        }
-        .form-container button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .form-container button:hover {
-            background-color: #0056b3;
-        }
-        .form-container label {
+        .form-group label {
             display: block;
             margin-bottom: 5px;
             color: #495057;
         }
-        .form-container .form-group {
-            margin-bottom: 15px;
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group input[type="file"] {
+            padding: 3px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -88,7 +98,7 @@
         <button onclick="window.location.href='/users'">Все пользователи</button>
         <button onclick="window.location.href='/logout'">Выйти</button>
     </div>
-    <div class="form-container">
+    <div class="container">
         <h1>Добавить вакансию</h1>
         <form th:action="@{/vacancies/add}" method="post" enctype="multipart/form-data">
             <div class="form-group">
@@ -100,15 +110,36 @@
                 <textarea id="description" name="description" placeholder="Описание" required></textarea>
             </div>
             <div class="form-group">
+                <label for="shortDescription">Краткое описание</label>
+                <textarea id="shortDescription" name="shortDescription" placeholder="Краткое описание" required></textarea>
+            </div>
+            <div class="form-group">
                 <label for="skills">Навыки</label>
                 <input type="text" id="skills" name="skills" placeholder="Навыки (через запятую)" required>
+            </div>
+            <div class="form-group">
+                <label for="salary">Зарплата</label>
+                <input type="text" id="salary" name="salary" placeholder="Зарплата" required>
+            </div>
+            <div class="form-group">
+                <label for="experience">Опыт</label>
+                <input type="text" id="experience" name="experience" placeholder="Опыт" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Возраст</label>
+                <input type="number" id="age" name="age" placeholder="Возраст" required>
             </div>
             <div class="form-group">
                 <label for="image">Изображение</label>
                 <input type="file" id="image" name="image">
             </div>
-            <button type="submit">Добавить вакансию</button>
+            <div class="form-group">
+                <button type="submit">Добавить вакансию</button>
+            </div>
         </form>
+        <div th:if="${error}" class="error-message">
+            <p th:text="${error}">Ошибка при добавлении вакансии</p>
+        </div>
     </div>
 </body>
 </html>

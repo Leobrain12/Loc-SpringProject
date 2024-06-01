@@ -65,5 +65,11 @@ public class UserServiceIMPL implements UserService {
         return null;
     }
 
+    @Override
+    public void removeFavoriteVacancy(User user, Long vacancyId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'removeFavoriteVacancy'");
+    }
+
 
 }

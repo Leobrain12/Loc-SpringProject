@@ -22,7 +22,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.Set;
 import org.slf4j.Logger;
@@ -64,35 +63,56 @@ public class VacancyWebController {
     }
 
     @PostMapping("/vacancies/add")
-    public String addVacancy(@RequestParam("name") String name,
-                            @RequestParam("description") String description,
-                            @RequestParam("skills") String skills,
-                            @RequestParam("image") MultipartFile image) {
+    public String addVacancy(
+            @RequestParam("name") String name,
+            @RequestParam("description") String description,
+            @RequestParam("shortDescription") String shortDescription,
+            @RequestParam("skills") String skills,
+            @RequestParam("salary") String salary,
+            @RequestParam("experience") String experience,
+            @RequestParam("age") int age,
+            @RequestParam("image") MultipartFile image,
+            Model model) {
+        String fileName = null;
+    
         Vacancy vacancy = new Vacancy();
         vacancy.setName(name);
         vacancy.setDescription(description);
+        vacancy.setShortDescription(shortDescription);
         vacancy.setSkills(List.of(skills.split(",")));
-
+        vacancy.setSalary(salary);
+        vacancy.setExperience(experience);
+        vacancy.setAge(age);
+    
         if (!image.isEmpty()) {
-            try {
-                String uploadsDir = "src/main/resources/static/uploads/";
-                Path uploadsPath = Paths.get(uploadsDir);
-                if (!Files.exists(uploadsPath)) {
-                    Files.createDirectories(uploadsPath);
-                }
-
-                String fileName = System.currentTimeMillis() + "_" + image.getOriginalFilename();
-                Path filePath = uploadsPath.resolve(fileName);
-                Files.copy(image.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
-                vacancy.setImage(fileName);
-                logger.info("Image uploaded successfully: {}", filePath);
-            } catch (IOException e) {
-                logger.error("Error uploading image", e);
-                return "redirect:/vacancies/add?error";
-            }
+            fileName = saveFile(image);
+            vacancy.setImage(fileName);
         }
-
+    
         vacancyService.saveVacancy(vacancy);
         return "redirect:/vacancies";
+    }
+    
+    
+    private String saveFile(MultipartFile file) {
+        String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
+        try {
+            Path path = Paths.get("src/main/resources/static/uploads/" + fileName);
+            if (Files.notExists(path.getParent())) {
+                Files.createDirectories(path.getParent());
+            }
+            Files.write(path, file.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Ошибка при сохранении файла", e);
+        }
+        return fileName;
+    }
+
+    @GetMapping("/vacancy/details/{vacancyId}")
+    public String viewVacancyDetails(@PathVariable Long vacancyId, Model model) {
+        Vacancy vacancy = vacancyService.findById(vacancyId);
+        model.addAttribute("vacancy", vacancy);
+        return "vacancy_details";
     }
 }

@@ -16,4 +16,5 @@ public interface UserService {
     Optional<User> findByEmail(String email);
     void addFavoriteVacancy(User user, Long vacancyId);
     Set<Vacancy> getFavoriteVacancies(User user);
+    void removeFavoriteVacancy(User user, Long vacancyId);
 }

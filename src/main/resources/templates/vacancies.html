@@ -92,6 +92,38 @@
             background-color: #218838;
         }
     </style>
+    <script>
+        function deleteVacancy(vacancyId) {
+            if (confirm('Are you sure you want to delete this vacancy?')) {
+                fetch(`/api/vacancy/delete/${vacancyId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.reload();
+                    } else {
+                        alert('Error deleting vacancy');
+                    }
+                });
+            }
+        }
+
+        function addToFavorites(vacancyId) {
+            fetch(`/vacancies/favorite/${vacancyId}`, {
+                method: 'POST'
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Vacancy added to favorites');
+                } else {
+                    alert('Failed to add vacancy to favorites');
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="menu">
@@ -109,9 +141,9 @@
             <h2 th:text="${vacancy.name}"></h2>
             <p th:text="${vacancy.description}"></p>
             <p>Навыки: <span th:text="${#strings.arrayJoin(vacancy.skills, ', ')}"></span></p>
-            <form th:action="@{/vacancies/favorite/{vacancyId}(vacancyId=${vacancy.vacancyId})}" method="post">
-                <button type="submit">Добавить в избранное</button>
-            </form>
+            <button th:attr="onclick=|deleteVacancy(${vacancy.vacancyId})|">Удалить</button>
+            <button th:attr="onclick=|window.location.href='/vacancy/details/' + ${vacancy.vacancyId}|">Посмотреть детали</button>
+            <button th:attr="onclick=|addToFavorites(${vacancy.vacancyId})|">Добавить в избранное</button>
         </div>
     </div>
 </body>

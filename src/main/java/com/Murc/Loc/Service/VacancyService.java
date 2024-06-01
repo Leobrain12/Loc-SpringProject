@@ -1,9 +1,8 @@
 package com.Murc.Loc.Service;
+
 import java.util.List;
 
-
 import com.Murc.Loc.Model.Vacancy;
-
 
 public interface VacancyService {
     List<Vacancy> findAllVacancy();

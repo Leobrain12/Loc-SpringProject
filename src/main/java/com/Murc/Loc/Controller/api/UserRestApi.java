@@ -2,6 +2,9 @@ package com.Murc.Loc.Controller.api;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -44,6 +47,12 @@ public class UserRestApi {
     @DeleteMapping("delete_user/{userId}")
     public void deleteUser(@PathVariable Long userId) {
         service.deleteUser(userId);
+    }
+     @DeleteMapping("favorites/{vacancyId}")
+    public ResponseEntity<Void> removeFavoriteVacancy(@PathVariable Long vacancyId, @AuthenticationPrincipal UserDetails userDetails) {
+        User user = service.findByEmail(userDetails.getUsername()).orElseThrow(() -> new RuntimeException("User not found"));
+        service.removeFavoriteVacancy(user, vacancyId);
+        return ResponseEntity.ok().build();
     }
 }
 

@@ -22,7 +22,7 @@ public class Vacancy {
     private String name;
     private String image;
     private String description;
-    private Long zoneId;
+    private String shortDescription;
     @ElementCollection
     private List<String> skills;
     private String salary;

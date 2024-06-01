@@ -1,0 +1,1065 @@
+2024-06-01T21:13:17.584+03:00  INFO 38612 --- [restartedMain] com.Murc.Loc.LocApplication              : Starting LocApplication using Java 19.0.1 with PID 38612 (C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject\target\classes started by danii in C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject)
+2024-06-01T21:13:17.586+03:00 DEBUG 38612 --- [restartedMain] com.Murc.Loc.LocApplication              : Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-01T21:13:17.587+03:00  INFO 38612 --- [restartedMain] com.Murc.Loc.LocApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-06-01T21:13:17.651+03:00  INFO 38612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-01T21:13:17.652+03:00  INFO 38612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-01T21:13:18.651+03:00  INFO 38612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-01T21:13:18.736+03:00  INFO 38612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
+2024-06-01T21:13:19.620+03:00  INFO 38612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-01T21:13:19.637+03:00  INFO 38612 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-01T21:13:19.638+03:00  INFO 38612 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-01T21:13:19.701+03:00  INFO 38612 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-01T21:13:19.702+03:00  INFO 38612 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2049 ms
+2024-06-01T21:13:19.893+03:00  INFO 38612 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-01T21:13:19.989+03:00  INFO 38612 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-01T21:13:20.051+03:00  INFO 38612 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-01T21:13:20.482+03:00  INFO 38612 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-01T21:13:20.525+03:00  INFO 38612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-01T21:13:20.770+03:00  INFO 38612 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b441533
+2024-06-01T21:13:20.774+03:00  INFO 38612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-01T21:13:20.833+03:00  WARN 38612 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-01T21:13:22.081+03:00  INFO 38612 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-01T21:13:22.233+03:00  INFO 38612 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-01T21:13:22.649+03:00 DEBUG 38612 --- [restartedMain] c.M.Loc.Config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-01T21:13:22.719+03:00  INFO 38612 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-01T21:13:22.721+03:00  WARN 38612 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-01T21:13:22.856+03:00  WARN 38612 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-01T21:13:23.288+03:00  INFO 38612 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e49114d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@493ebb83, org.springframework.security.web.context.SecurityContextHolderFilter@155815e, org.springframework.security.web.header.HeaderWriterFilter@64160226, org.springframework.web.filter.CorsFilter@532dac77, org.springframework.security.web.authentication.logout.LogoutFilter@2c7e2aa8, com.Murc.Loc.Config.JwtAuthenticationFilter@3300b4e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60bad52a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c9ed159, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6887ea47, org.springframework.security.web.session.SessionManagementFilter@78273ab3, org.springframework.security.web.access.ExceptionTranslationFilter@1e106c78, org.springframework.security.web.access.intercept.AuthorizationFilter@24ec7b9c]
+2024-06-01T21:13:23.625+03:00  INFO 38612 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-01T21:13:23.662+03:00  INFO 38612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-01T21:13:23.674+03:00  INFO 38612 --- [restartedMain] com.Murc.Loc.LocApplication              : Started LocApplication in 6.567 seconds (process running for 7.172)
+2024-06-01T21:14:52.328+03:00  INFO 38612 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-01T21:14:52.329+03:00  INFO 38612 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-01T21:14:52.330+03:00  INFO 38612 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-01T21:14:52.353+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:14:52.636+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:14:53.084+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:14:53.098+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:14:53.121+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:14:53.134+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:14:53.150+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:14:53.150+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:14:53.151+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:14:54.156+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /vacancy/details/5
+2024-06-01T21:14:54.169+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /vacancy/details/5
+2024-06-01T21:14:54.239+03:00 DEBUG 38612 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:14:54.252+03:00 DEBUG 38612 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:14:54.271+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:14:54.284+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:14:54.287+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:14:54.287+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:14:54.289+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:14:59.314+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:14:59.326+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:14:59.370+03:00 DEBUG 38612 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:14:59.382+03:00 DEBUG 38612 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:14:59.387+03:00 DEBUG 38612 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:14:59.388+03:00 DEBUG 38612 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:14:59.388+03:00 DEBUG 38612 --- [http-nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:15:01.347+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /vacancies/add
+2024-06-01T21:15:01.356+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /vacancies/add
+2024-06-01T21:15:01.385+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:15:01.395+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:15:01.399+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:15:01.399+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:15:01.399+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:15:10.120+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /vacancies/add
+2024-06-01T21:15:10.131+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /vacancies/add
+2024-06-01T21:15:10.156+03:00 ERROR 38612 --- [http-nio-8080-exec-3] c.M.L.C.WEB.VacancyWebController         : Error uploading image
+
+java.io.IOException: java.io.FileNotFoundException: C:\Users\danii\AppData\Local\Temp\tomcat.8080.15661473798819479573\work\Tomcat\localhost\ROOT\src\main\resources\static\uploads\default-avatar.png (Системе не удается найти указанный путь)
+	at org.apache.catalina.core.ApplicationPart.write(ApplicationPart.java:119) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile.transferTo(StandardMultipartHttpServletRequest.java:265) ~[spring-web-6.1.8.jar:6.1.8]
+	at com.Murc.Loc.Controller.WEB.VacancyWebController.addVacancy(VacancyWebController.java:97) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at com.Murc.Loc.Config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:76) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+Caused by: java.io.FileNotFoundException: C:\Users\danii\AppData\Local\Temp\tomcat.8080.15661473798819479573\work\Tomcat\localhost\ROOT\src\main\resources\static\uploads\default-avatar.png (Системе не удается найти указанный путь)
+	at java.base/java.io.FileOutputStream.open0(Native Method) ~[na:na]
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295) ~[na:na]
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236) ~[na:na]
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185) ~[na:na]
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.write(DiskFileItem.java:405) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationPart.write(ApplicationPart.java:117) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	... 103 common frames omitted
+
+2024-06-01T21:15:10.177+03:00 ERROR 38612 --- [http-nio-8080-exec-3] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-3] Exception processing template "vacancies/add_vacancy": Error resolving template [vacancies/add_vacancy], template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [vacancies/add_vacancy], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at com.Murc.Loc.Config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:76) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-06-01T21:15:10.188+03:00 ERROR 38612 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [vacancies/add_vacancy], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [vacancies/add_vacancy], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at com.Murc.Loc.Config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:76) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-06-01T21:15:10.198+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-06-01T21:15:10.198+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:15:10.199+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:16:42.907+03:00 DEBUG 38612 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:16:42.915+03:00 DEBUG 38612 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:16:42.995+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:16:43.007+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:16:43.020+03:00 DEBUG 38612 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:16:43.031+03:00 DEBUG 38612 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:16:43.037+03:00 DEBUG 38612 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:16:43.038+03:00 DEBUG 38612 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:16:43.038+03:00 DEBUG 38612 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:16:58.000+03:00  INFO 38612 --- [http-nio-8080-exec-9] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x070x000x010x000x060xfc0x030x03V0xcfI'0xcd0x95C@0xd40x8e40xad0xb50xce0x090xe7-20xba0x8e0xda0x0fQ0xcc0xdf0x93d`0x090xbb0x9a0xf7 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:262) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-06-01T21:23:00.844+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /profile/favorites
+2024-06-01T21:23:00.856+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /profile/favorites
+2024-06-01T21:23:00.918+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:23:00.929+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:23:00.934+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:23:00.935+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:23:00.935+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:23:01.533+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /profile
+2024-06-01T21:23:01.543+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /profile
+2024-06-01T21:23:01.569+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717251705451_2ad206050f989bf5c6afaf617cbaa9c2.jpg
+2024-06-01T21:23:01.581+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717251705451_2ad206050f989bf5c6afaf617cbaa9c2.jpg
+2024-06-01T21:23:01.584+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:23:01.585+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:23:01.585+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:23:01.592+03:00 DEBUG 38612 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:23:01.605+03:00 DEBUG 38612 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:23:01.628+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:23:01.640+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:23:01.644+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:23:01.644+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:23:01.645+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:23:03.005+03:00 DEBUG 38612 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /profile/favorites
+2024-06-01T21:23:03.016+03:00 DEBUG 38612 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /profile/favorites
+2024-06-01T21:23:03.051+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:23:03.062+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:23:03.066+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:23:03.066+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:23:03.067+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:23:03.468+03:00 DEBUG 38612 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:23:03.476+03:00 DEBUG 38612 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:23:03.502+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:23:03.511+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:23:03.525+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:23:03.535+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:23:03.538+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:23:03.538+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:23:03.540+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:23:03.889+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-06-01T21:23:03.899+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-06-01T21:23:03.943+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717251705451_2ad206050f989bf5c6afaf617cbaa9c2.jpg
+2024-06-01T21:23:03.944+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /uploads/null
+2024-06-01T21:23:03.956+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717251705451_2ad206050f989bf5c6afaf617cbaa9c2.jpg
+2024-06-01T21:23:03.959+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /uploads/null
+2024-06-01T21:23:03.959+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:23:03.961+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:23:03.961+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:23:03.964+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:23:03.965+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:23:03.966+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:23:03.966+03:00 DEBUG 38612 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:23:03.981+03:00 DEBUG 38612 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:23:03.994+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:23:04.005+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:23:04.010+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:23:04.011+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:23:04.011+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:24:44.394+03:00 DEBUG 38612 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-06-01T21:24:44.410+03:00 DEBUG 38612 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-06-01T21:24:44.434+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717251705451_2ad206050f989bf5c6afaf617cbaa9c2.jpg
+2024-06-01T21:24:44.436+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /uploads/null
+2024-06-01T21:24:44.443+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717251705451_2ad206050f989bf5c6afaf617cbaa9c2.jpg
+2024-06-01T21:24:44.443+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /uploads/null
+2024-06-01T21:24:44.447+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:24:44.447+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:24:44.447+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:24:44.453+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:24:44.454+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:24:44.454+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:24:44.454+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:24:44.463+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:24:44.472+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:24:44.482+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:24:44.485+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:24:44.485+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:24:44.485+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:24:45.369+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:24:45.376+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:24:45.404+03:00 DEBUG 38612 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:24:45.413+03:00 DEBUG 38612 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:24:45.422+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:24:45.433+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:24:45.435+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:24:45.435+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:24:45.435+03:00 DEBUG 38612 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:24:47.114+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /vacancies/5/add-to-favorites
+2024-06-01T21:24:47.122+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /vacancies/5/add-to-favorites
+2024-06-01T21:24:47.125+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-06-01T21:24:47.126+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:24:47.126+03:00 DEBUG 38612 --- [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:24:53.842+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /profile/favorites
+2024-06-01T21:24:53.851+03:00 DEBUG 38612 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /profile/favorites
+2024-06-01T21:24:53.881+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:24:53.889+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:24:53.893+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:24:53.893+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:24:53.894+03:00 DEBUG 38612 --- [http-nio-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:24:54.389+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:24:54.398+03:00 DEBUG 38612 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:24:54.424+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:24:54.435+03:00 DEBUG 38612 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:24:54.451+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:24:54.462+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:24:54.465+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:24:54.465+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:24:54.466+03:00 DEBUG 38612 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:27:07.743+03:00  INFO 38612 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-06-01T21:27:07.756+03:00  INFO 38612 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-01T21:27:07.760+03:00  INFO 38612 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-01T21:27:07.763+03:00  INFO 38612 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-01T21:27:07.845+03:00  INFO 38612 --- [restartedMain] com.Murc.Loc.LocApplication              : Starting LocApplication using Java 19.0.1 with PID 38612 (C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject\target\classes started by danii in C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject)
+2024-06-01T21:27:07.846+03:00 DEBUG 38612 --- [restartedMain] com.Murc.Loc.LocApplication              : Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-01T21:27:07.846+03:00  INFO 38612 --- [restartedMain] com.Murc.Loc.LocApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-06-01T21:27:08.031+03:00  INFO 38612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-01T21:27:08.048+03:00  INFO 38612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2024-06-01T21:27:08.174+03:00  INFO 38612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-01T21:27:08.176+03:00  INFO 38612 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-01T21:27:08.176+03:00  INFO 38612 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-01T21:27:08.197+03:00  INFO 38612 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-01T21:27:08.197+03:00  INFO 38612 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 349 ms
+2024-06-01T21:27:08.256+03:00  INFO 38612 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-01T21:27:08.258+03:00  INFO 38612 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-01T21:27:08.267+03:00  INFO 38612 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-01T21:27:08.268+03:00  INFO 38612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-06-01T21:27:08.309+03:00  INFO 38612 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1ddd85fd
+2024-06-01T21:27:08.309+03:00  INFO 38612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-06-01T21:27:08.318+03:00  WARN 38612 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-01T21:27:08.457+03:00  INFO 38612 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-01T21:27:08.594+03:00  INFO 38612 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-01T21:27:08.666+03:00 DEBUG 38612 --- [restartedMain] c.M.Loc.Config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-01T21:27:08.696+03:00  INFO 38612 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-01T21:27:08.698+03:00  WARN 38612 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-01T21:27:08.769+03:00  WARN 38612 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-01T21:27:08.843+03:00  INFO 38612 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2584b598, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2093f516, org.springframework.security.web.context.SecurityContextHolderFilter@183add43, org.springframework.security.web.header.HeaderWriterFilter@1b9dd494, org.springframework.web.filter.CorsFilter@34f9751e, org.springframework.security.web.authentication.logout.LogoutFilter@9218678, com.Murc.Loc.Config.JwtAuthenticationFilter@2b345117, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d27eb3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38ebbf7b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e6bf1d2, org.springframework.security.web.session.SessionManagementFilter@3e282067, org.springframework.security.web.access.ExceptionTranslationFilter@73a4cd86, org.springframework.security.web.access.intercept.AuthorizationFilter@1ed88219]
+2024-06-01T21:27:08.893+03:00  INFO 38612 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-01T21:27:08.898+03:00  INFO 38612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-01T21:27:08.901+03:00  INFO 38612 --- [restartedMain] com.Murc.Loc.LocApplication              : Started LocApplication in 1.08 seconds (process running for 832.399)
+2024-06-01T21:27:08.904+03:00  INFO 38612 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-06-01T21:37:34.620+03:00  INFO 47252 --- [restartedMain] com.Murc.Loc.LocApplication              : Starting LocApplication using Java 19.0.1 with PID 47252 (C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject\target\classes started by danii in C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject)
+2024-06-01T21:37:34.623+03:00 DEBUG 47252 --- [restartedMain] com.Murc.Loc.LocApplication              : Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-01T21:37:34.623+03:00  INFO 47252 --- [restartedMain] com.Murc.Loc.LocApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-06-01T21:37:34.689+03:00  INFO 47252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-01T21:37:34.690+03:00  INFO 47252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-01T21:37:35.594+03:00  INFO 47252 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-01T21:37:35.683+03:00  INFO 47252 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+2024-06-01T21:37:36.610+03:00  INFO 47252 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-01T21:37:36.630+03:00  INFO 47252 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-01T21:37:36.630+03:00  INFO 47252 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-01T21:37:36.702+03:00  INFO 47252 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-01T21:37:36.703+03:00  INFO 47252 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2013 ms
+2024-06-01T21:37:36.928+03:00  INFO 47252 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-01T21:37:37.012+03:00  INFO 47252 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-01T21:37:37.069+03:00  INFO 47252 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-01T21:37:37.473+03:00  INFO 47252 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-01T21:37:37.513+03:00  INFO 47252 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-01T21:37:37.764+03:00  INFO 47252 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@71e396fd
+2024-06-01T21:37:37.766+03:00  INFO 47252 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-01T21:37:37.818+03:00  WARN 47252 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-01T21:37:39.006+03:00  INFO 47252 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-01T21:37:39.137+03:00  INFO 47252 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-01T21:37:39.520+03:00 DEBUG 47252 --- [restartedMain] c.M.Loc.Config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-01T21:37:39.578+03:00  INFO 47252 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-01T21:37:39.580+03:00  WARN 47252 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-01T21:37:39.696+03:00  WARN 47252 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-01T21:37:39.874+03:00  WARN 47252 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed
+2024-06-01T21:37:39.876+03:00  INFO 47252 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-01T21:37:39.880+03:00  INFO 47252 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-01T21:37:39.885+03:00  INFO 47252 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-01T21:37:39.890+03:00  INFO 47252 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-06-01T21:37:39.905+03:00  INFO 47252 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-01T21:37:39.935+03:00 ERROR 47252 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:514) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1421) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.Murc.Loc.LocApplication.main(LocApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+Caused by: java.lang.RuntimeException: Could not postProcess org.springframework.security.config.annotation.web.builders.WebSecurity@27f1c6 of type class org.springframework.security.config.annotation.web.builders.WebSecurity
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.postProcess(AutowireBeanFactoryObjectPostProcessor.java:71) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.setFilterChainProxySecurityConfigurer(WebSecurityConfiguration.java:148) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:853) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospectorRequestTransformer': Cannot resolve reference to bean 'mvcHandlerMappingIntrospector' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:682) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:203) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:225) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1323) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1284) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:486) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$1.getIfUnique(DefaultListableBeanFactory.java:438) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.setApplicationContext(WebSecurity.java:397) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:110) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:85) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:412) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.initializeBeanIfNeeded(AutowireBeanFactoryObjectPostProcessor.java:98) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.postProcess(AutowireBeanFactoryObjectPostProcessor.java:67) ~[spring-security-config-6.3.0.jar:6.3.0]
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'vacancyWebController' method 
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails)
+to {POST [/vacancies/favorite/{vacancyId}]}: There is already 'vacancyWebController' bean method
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails, Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 49 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'vacancyWebController' method 
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails)
+to {POST [/vacancies/favorite/{vacancyId}]}: There is already 'vacancyWebController' bean method
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails, Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:665) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1388) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:368) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.initHandlerMappings(HandlerMappingIntrospector.java:130) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.afterPropertiesSet(HandlerMappingIntrospector.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 56 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'vacancyWebController' method 
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails)
+to {POST [/vacancies/favorite/{vacancyId}]}: There is already 'vacancyWebController' bean method
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails, Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:674) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:636) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:508) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:239) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 69 common frames omitted
+
+2024-06-01T21:37:59.120+03:00  INFO 9080 --- [restartedMain] com.Murc.Loc.LocApplication              : Starting LocApplication using Java 19.0.1 with PID 9080 (C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject\target\classes started by danii in C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject)
+2024-06-01T21:37:59.122+03:00 DEBUG 9080 --- [restartedMain] com.Murc.Loc.LocApplication              : Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-01T21:37:59.123+03:00  INFO 9080 --- [restartedMain] com.Murc.Loc.LocApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-06-01T21:37:59.179+03:00  INFO 9080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-01T21:37:59.181+03:00  INFO 9080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-01T21:38:00.081+03:00  INFO 9080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-01T21:38:00.178+03:00  INFO 9080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 2 JPA repository interfaces.
+2024-06-01T21:38:01.132+03:00  INFO 9080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-01T21:38:01.149+03:00  INFO 9080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-01T21:38:01.150+03:00  INFO 9080 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-01T21:38:01.214+03:00  INFO 9080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-01T21:38:01.214+03:00  INFO 9080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2033 ms
+2024-06-01T21:38:01.403+03:00  INFO 9080 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-01T21:38:01.478+03:00  INFO 9080 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-01T21:38:01.522+03:00  INFO 9080 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-01T21:38:01.799+03:00  INFO 9080 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-01T21:38:01.828+03:00  INFO 9080 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-01T21:38:02.132+03:00  INFO 9080 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@61cd9f42
+2024-06-01T21:38:02.134+03:00  INFO 9080 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-01T21:38:02.171+03:00  WARN 9080 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-01T21:38:03.292+03:00  INFO 9080 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-01T21:38:03.426+03:00  INFO 9080 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-01T21:38:03.827+03:00 DEBUG 9080 --- [restartedMain] c.M.Loc.Config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-01T21:38:03.892+03:00  INFO 9080 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-01T21:38:03.893+03:00  WARN 9080 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-01T21:38:04.015+03:00  WARN 9080 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-01T21:38:04.178+03:00  WARN 9080 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed
+2024-06-01T21:38:04.179+03:00  INFO 9080 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-01T21:38:04.183+03:00  INFO 9080 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-01T21:38:04.187+03:00  INFO 9080 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-01T21:38:04.194+03:00  INFO 9080 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-06-01T21:38:04.211+03:00  INFO 9080 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-01T21:38:04.240+03:00 ERROR 9080 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:514) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1421) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.Murc.Loc.LocApplication.main(LocApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+Caused by: java.lang.RuntimeException: Could not postProcess org.springframework.security.config.annotation.web.builders.WebSecurity@576170e8 of type class org.springframework.security.config.annotation.web.builders.WebSecurity
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.postProcess(AutowireBeanFactoryObjectPostProcessor.java:71) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.setFilterChainProxySecurityConfigurer(WebSecurityConfiguration.java:148) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:853) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospectorRequestTransformer': Cannot resolve reference to bean 'mvcHandlerMappingIntrospector' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:682) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:203) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:225) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1323) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1284) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:486) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$1.getIfUnique(DefaultListableBeanFactory.java:438) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.setApplicationContext(WebSecurity.java:397) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:110) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:85) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:412) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.initializeBeanIfNeeded(AutowireBeanFactoryObjectPostProcessor.java:98) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.postProcess(AutowireBeanFactoryObjectPostProcessor.java:67) ~[spring-security-config-6.3.0.jar:6.3.0]
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'vacancyWebController' method 
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails)
+to {POST [/vacancies/favorite/{vacancyId}]}: There is already 'vacancyWebController' bean method
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails, Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 49 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'vacancyWebController' method 
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails)
+to {POST [/vacancies/favorite/{vacancyId}]}: There is already 'vacancyWebController' bean method
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails, Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:665) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1388) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:368) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.initHandlerMappings(HandlerMappingIntrospector.java:130) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.afterPropertiesSet(HandlerMappingIntrospector.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 56 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'vacancyWebController' method 
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails)
+to {POST [/vacancies/favorite/{vacancyId}]}: There is already 'vacancyWebController' bean method
+com.Murc.Loc.Controller.WEB.VacancyWebController#addToFavorites(Long, UserDetails, Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:674) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:636) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:508) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:239) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 69 common frames omitted
+
+2024-06-01T21:39:32.251+03:00  INFO 48136 --- [restartedMain] com.Murc.Loc.LocApplication              : Starting LocApplication using Java 19.0.1 with PID 48136 (C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject\target\classes started by danii in C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject)
+2024-06-01T21:39:32.252+03:00 DEBUG 48136 --- [restartedMain] com.Murc.Loc.LocApplication              : Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-01T21:39:32.253+03:00  INFO 48136 --- [restartedMain] com.Murc.Loc.LocApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-06-01T21:39:32.304+03:00  INFO 48136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-01T21:39:32.305+03:00  INFO 48136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-01T21:39:33.012+03:00  INFO 48136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-01T21:39:33.080+03:00  INFO 48136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+2024-06-01T21:39:33.831+03:00  INFO 48136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-01T21:39:33.845+03:00  INFO 48136 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-01T21:39:33.845+03:00  INFO 48136 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-01T21:39:33.914+03:00  INFO 48136 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-01T21:39:33.914+03:00  INFO 48136 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1608 ms
+2024-06-01T21:39:34.087+03:00  INFO 48136 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-01T21:39:34.160+03:00  INFO 48136 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-01T21:39:34.214+03:00  INFO 48136 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-01T21:39:34.528+03:00  INFO 48136 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-01T21:39:34.559+03:00  INFO 48136 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-01T21:39:34.744+03:00  INFO 48136 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1bc5625c
+2024-06-01T21:39:34.745+03:00  INFO 48136 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-01T21:39:34.779+03:00  WARN 48136 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-01T21:39:35.741+03:00  INFO 48136 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-01T21:39:35.938+03:00  INFO 48136 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-01T21:39:36.251+03:00 DEBUG 48136 --- [restartedMain] c.M.Loc.Config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-01T21:39:36.302+03:00  INFO 48136 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-01T21:39:36.303+03:00  WARN 48136 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-01T21:39:36.396+03:00  WARN 48136 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-01T21:39:36.695+03:00  INFO 48136 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@60c2836c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ae59264, org.springframework.security.web.context.SecurityContextHolderFilter@ee40f72, org.springframework.security.web.header.HeaderWriterFilter@10031e3f, org.springframework.web.filter.CorsFilter@229a4e8a, org.springframework.security.web.authentication.logout.LogoutFilter@e4ea4c1, com.Murc.Loc.Config.JwtAuthenticationFilter@6a8476a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fa6b676, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@325855b4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d497f79, org.springframework.security.web.session.SessionManagementFilter@7a9239d1, org.springframework.security.web.access.ExceptionTranslationFilter@73ba704, org.springframework.security.web.access.intercept.AuthorizationFilter@3d6ee070]
+2024-06-01T21:39:36.935+03:00  INFO 48136 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-01T21:39:36.962+03:00  INFO 48136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-01T21:39:36.971+03:00  INFO 48136 --- [restartedMain] com.Murc.Loc.LocApplication              : Started LocApplication in 5.149 seconds (process running for 5.57)
+2024-06-01T21:39:40.564+03:00  INFO 48136 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-01T21:39:40.565+03:00  INFO 48136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-01T21:39:40.567+03:00  INFO 48136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-01T21:39:40.585+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:39:40.813+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:39:41.138+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:39:41.147+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:39:41.164+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:39:41.172+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:39:41.181+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:39:41.182+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:39:41.182+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:39:42.751+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /vacancy/details/5
+2024-06-01T21:39:42.760+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /vacancy/details/5
+2024-06-01T21:39:42.808+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:39:42.818+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:39:42.829+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:39:42.839+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:39:42.843+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:39:42.843+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:39:42.844+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:39:44.197+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:39:44.208+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:39:44.233+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:39:44.243+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:39:44.251+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:39:44.259+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:39:44.262+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:39:44.262+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:39:44.262+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:39:45.319+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /vacancies/favorite/5
+2024-06-01T21:39:45.334+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /vacancies/favorite/5
+2024-06-01T21:39:45.410+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:39:45.421+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:39:47.758+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /profile/favorites
+2024-06-01T21:39:47.769+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /profile/favorites
+2024-06-01T21:39:47.818+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:39:47.829+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:39:47.841+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:39:47.851+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:39:47.855+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:39:47.856+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:39:47.857+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:39:50.558+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing DELETE /api/user/favorites/5
+2024-06-01T21:39:50.571+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured DELETE /api/user/favorites/5
+2024-06-01T21:39:50.617+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /profile/favorites
+2024-06-01T21:39:50.627+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /profile/favorites
+2024-06-01T21:39:50.659+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:39:50.668+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:39:50.671+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:39:50.673+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:39:50.673+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:39:51.541+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:39:51.549+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:39:51.587+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:39:51.596+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:39:51.608+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:39:51.619+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:39:51.621+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:39:51.622+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:39:51.622+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:39:52.696+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /vacancies/favorite/5
+2024-06-01T21:39:52.704+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /vacancies/favorite/5
+2024-06-01T21:39:52.730+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:39:52.739+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:39:54.200+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /vacancies/add
+2024-06-01T21:39:54.209+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /vacancies/add
+2024-06-01T21:39:54.243+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:39:54.253+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:39:54.257+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:39:54.258+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:39:54.258+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:40:01.804+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /vacancies/add
+2024-06-01T21:40:01.813+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /vacancies/add
+2024-06-01T21:40:01.891+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:40:01.902+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:40:01.935+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:40:01.936+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717267201847_default-avatar.png
+2024-06-01T21:40:01.945+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:40:01.949+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717267201847_default-avatar.png
+2024-06-01T21:40:01.954+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:40:01.954+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:40:01.955+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:40:01.964+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:40:01.975+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:40:01.979+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:40:01.980+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:40:01.980+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:40:03.516+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:40:03.526+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:40:03.558+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:40:03.558+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717267201847_default-avatar.png
+2024-06-01T21:40:03.569+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:40:03.569+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717267201847_default-avatar.png
+2024-06-01T21:40:03.584+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:40:03.597+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:40:03.600+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:40:03.600+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:40:03.601+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:40:07.498+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /vacancies/add
+2024-06-01T21:40:07.504+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /vacancies/add
+2024-06-01T21:40:07.526+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:40:07.535+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:40:07.539+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:40:07.539+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:40:07.539+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:40:16.241+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /vacancies/add
+2024-06-01T21:40:16.249+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /vacancies/add
+2024-06-01T21:40:16.277+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:40:16.283+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:40:16.317+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:40:16.318+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717267201847_default-avatar.png
+2024-06-01T21:40:16.318+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717267216263_fc24eee000054dd519cd5e5389ca0039.jpg
+2024-06-01T21:40:16.326+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717267216263_fc24eee000054dd519cd5e5389ca0039.jpg
+2024-06-01T21:40:16.327+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:40:16.327+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717267201847_default-avatar.png
+2024-06-01T21:40:16.331+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:40:16.331+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:40:16.332+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:40:16.338+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:40:16.348+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:40:16.351+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:40:16.352+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:40:16.352+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:40:17.574+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:40:17.580+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:40:17.607+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:40:17.610+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717267201847_default-avatar.png
+2024-06-01T21:40:17.610+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717267216263_fc24eee000054dd519cd5e5389ca0039.jpg
+2024-06-01T21:40:17.616+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:40:17.616+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717267201847_default-avatar.png
+2024-06-01T21:40:17.619+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717267216263_fc24eee000054dd519cd5e5389ca0039.jpg
+2024-06-01T21:40:17.629+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:40:17.640+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:40:17.644+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:40:17.644+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:40:17.644+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:40:33.491+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-06-01T21:40:33.499+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-06-01T21:40:33.521+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717251705451_2ad206050f989bf5c6afaf617cbaa9c2.jpg
+2024-06-01T21:40:33.522+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /uploads/null
+2024-06-01T21:40:33.532+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /uploads/null
+2024-06-01T21:40:33.532+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717251705451_2ad206050f989bf5c6afaf617cbaa9c2.jpg
+2024-06-01T21:40:33.535+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:40:33.535+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:40:33.535+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:40:33.535+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:40:33.537+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:40:33.537+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:40:33.540+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:40:33.548+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:40:33.556+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:40:33.565+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:40:33.568+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:40:33.569+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:40:33.569+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:41:45.255+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-06-01T21:41:45.264+03:00 DEBUG 48136 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-06-01T21:41:45.284+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717251705451_2ad206050f989bf5c6afaf617cbaa9c2.jpg
+2024-06-01T21:41:45.284+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /uploads/null
+2024-06-01T21:41:45.293+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717251705451_2ad206050f989bf5c6afaf617cbaa9c2.jpg
+2024-06-01T21:41:45.293+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /uploads/null
+2024-06-01T21:41:45.295+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:41:45.295+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:41:45.297+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:41:45.297+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:41:45.297+03:00 DEBUG 48136 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:41:45.297+03:00 DEBUG 48136 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:41:45.302+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:41:45.310+03:00 DEBUG 48136 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:41:45.319+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:41:45.327+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:41:45.331+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:41:45.331+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:41:45.331+03:00 DEBUG 48136 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-01T21:41:48.340+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-01T21:41:48.346+03:00 DEBUG 48136 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-01T21:41:48.370+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-01T21:41:48.370+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717267201847_default-avatar.png
+2024-06-01T21:41:48.370+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /uploads/1717267216263_fc24eee000054dd519cd5e5389ca0039.jpg
+2024-06-01T21:41:48.378+03:00 DEBUG 48136 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717267201847_default-avatar.png
+2024-06-01T21:41:48.378+03:00 DEBUG 48136 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-01T21:41:48.378+03:00 DEBUG 48136 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /uploads/1717267216263_fc24eee000054dd519cd5e5389ca0039.jpg
+2024-06-01T21:41:48.390+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-01T21:41:48.398+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-01T21:41:48.400+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-01T21:41:48.401+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-01T21:41:48.401+03:00 DEBUG 48136 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access

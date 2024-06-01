@@ -26,7 +26,6 @@ public class InMemUserServiceIMPL implements UserService {
     private final VacancyRepository vacancyRepository;
     private final PasswordEncoder passwordEncoder;
 
-    
     @Override
     public List<User> findAllUser() {
         return repository.findAll();
@@ -58,9 +57,6 @@ public class InMemUserServiceIMPL implements UserService {
     
         return repository.save(existingUser);
     }
-    
-    
-    
 
     @Override
     public void deleteUser(Long userId) {
@@ -71,6 +67,7 @@ public class InMemUserServiceIMPL implements UserService {
     public User findById(Long userId) {
         return repository.findByUserId(userId);
     }
+    
     @Transactional
     @Override
     public Optional<User> findByEmail(String email) {
@@ -83,9 +80,17 @@ public class InMemUserServiceIMPL implements UserService {
         user.getFavoriteVacancies().add(vacancy);
         repository.save(user);
     }
+
     @Transactional
     @Override
     public Set<Vacancy> getFavoriteVacancies(User user) {
         return user.getFavoriteVacancies();
+    }
+
+    @Override
+    public void removeFavoriteVacancy(User user, Long vacancyId) {
+        Vacancy vacancy = vacancyRepository.findById(vacancyId).orElseThrow(() -> new RuntimeException("Vacancy not found"));
+        user.getFavoriteVacancies().remove(vacancy);
+        repository.save(user);
     }
 }

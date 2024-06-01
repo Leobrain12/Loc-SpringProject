@@ -1,6 +1,7 @@
 package com.Murc.Loc.Controller.WEB;
 
 import com.Murc.Loc.Auth.RegisterRequest;
+import com.Murc.Loc.Model.Role;
 import com.Murc.Loc.Model.User;
 import com.Murc.Loc.Service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -44,7 +45,7 @@ public class RegistrationController {
                 .email(registerRequest.getEmail())
                 .password(passwordEncoder.encode(registerRequest.getPassword()))
                 .image(fileName)
-                .role(com.Murc.Loc.Model.Role.USER)
+                .role(Role.USER)
                 .build();
 
         userService.saveUser(user);
@@ -56,10 +57,15 @@ public class RegistrationController {
         String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
         try {
             Path path = Paths.get("src/main/resources/static/uploads/" + fileName);
-            Files.createDirectories(path.getParent());
+            // Убедимся, что директории существуют
+            if (Files.notExists(path.getParent())) {
+                Files.createDirectories(path.getParent());
+            }
+            // Сохраним файл
             Files.write(path, file.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
+            throw new RuntimeException("Ошибка при сохранении файла", e);
         }
         return fileName;
     }
