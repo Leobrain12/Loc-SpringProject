@@ -205,12 +205,5 @@
             <button th:attr="onclick=|addToFavorites(${vacancy.vacancyId})|">Добавить в избранное</button>
         </div>
     </div>
-
-    <div class="pagination">
-        <a th:href="@{|/vacancies?page=0&size=${size}|}" th:classappend="${currentPage == 0} ? ' disabled'">Первая</a>
-        <a th:href="@{|/vacancies?page=${currentPage - 1}&size=${size}|}" th:classappend="${currentPage == 0} ? ' disabled'">Предыдущая</a>
-        <a th:href="@{|/vacancies?page=${currentPage + 1}&size=${size}|}" th:classappend="${currentPage + 1 == totalPages} ? ' disabled'">Следующая</a>
-        <a th:href="@{|/vacancies?page=${totalPages - 1}&size=${size}|}" th:classappend="${currentPage + 1 == totalPages} ? ' disabled'">Последняя</a>
-    </div>
 </body>
 </html>

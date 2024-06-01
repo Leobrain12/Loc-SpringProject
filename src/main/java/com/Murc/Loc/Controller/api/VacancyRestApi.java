@@ -1,5 +1,6 @@
 package com.Murc.Loc.Controller.api;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -50,7 +51,7 @@ public class VacancyRestApi {
             @RequestParam(required = false) String experience,
             @RequestParam(required = false) String skill,
             @RequestParam(required = false) String description,
-            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) java.util.Date createdAfter,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date createdAfter,
             Pageable pageable) {
 
         Specification<Vacancy> spec = Specification.where(null);
@@ -60,7 +61,9 @@ public class VacancyRestApi {
         }
 
         if (skill != null && !skill.isEmpty()) {
-            spec = spec.and(VacancySpecification.hasSkills(skill));
+            for (String singleSkill : skill.split(",")) {
+                spec = spec.and(VacancySpecification.hasSkills(singleSkill.trim()));
+            }
         }
 
         if (description != null && !description.isEmpty()) {
