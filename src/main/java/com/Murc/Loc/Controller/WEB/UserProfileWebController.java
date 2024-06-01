@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -98,6 +99,24 @@ public class UserProfileWebController {
                 .orElseThrow(() -> new RuntimeException("User not found"));
         Set<Vacancy> favoriteVacancies = user.getFavoriteVacancies();
         model.addAttribute("favoriteVacancies", favoriteVacancies);
+        return "favorite_vacancies";
+    }
+
+    @GetMapping("/profile/{userId}")
+    public String viewUserProfile(@PathVariable Long userId, @AuthenticationPrincipal UserDetails currentUser, Model model) {
+        User user = userService.findById(userId);
+        model.addAttribute("user", user);
+        boolean isCurrentUser = user.getEmail().equals(currentUser.getUsername());
+        model.addAttribute("isCurrentUser", isCurrentUser);
+        return "profile";
+    }
+
+    @GetMapping("/profile/{userId}/favorites")
+    public String viewUserFavorites(@PathVariable Long userId, Model model) {
+        User user = userService.findById(userId);
+        Set<Vacancy> favoriteVacancies = userService.getFavoriteVacancies(user);
+        model.addAttribute("favoriteVacancies", favoriteVacancies);
+        model.addAttribute("user", user);
         return "favorite_vacancies";
     }
 }

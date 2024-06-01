@@ -119,29 +119,36 @@
     <div class="profile-container">
         <img id="user-image" th:src="@{'/uploads/' + ${user.image}}" alt="User image">
         <h2 th:text="${user.firstName} + ' ' + ${user.lastName}"></h2>
-        <form action="/profile/update" method="post">
-            <div class="form-group">
-                <label for="firstName">Имя:</label>
-                <input type="text" id="firstName" name="firstName" th:value="${user.firstName}" required>
+        <p th:text="${user.email}"></p>
+        <div th:if="${isCurrentUser}">
+            <form action="/profile/update" method="post">
+                <div class="form-group">
+                    <label for="firstName">Имя:</label>
+                    <input type="text" id="firstName" name="firstName" th:value="${user.firstName}" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Фамилия:</label>
+                    <input type="text" id="lastName" name="lastName" th:value="${user.lastName}" required>
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Телефон:</label>
+                    <input type="text" id="telephone" name="telephone" th:value="${user.telephone}">
+                </div>
+                <div class="form-group">
+                    <label for="description">Описание:</label>
+                    <textarea id="description" name="description" rows="4" th:text="${user.description}"></textarea>
+                </div>
+                <button type="submit">Сохранить изменения</button>
+            </form>
+            <div th:if="${successMessage}" class="success-message">
+                <p th:text="${successMessage}"></p>
             </div>
-            <div class="form-group">
-                <label for="lastName">Фамилия:</label>
-                <input type="text" id="lastName" name="lastName" th:value="${user.lastName}" required>
-            </div>
-            <div class="form-group">
-                <label for="telephone">Телефон:</label>
-                <input type="text" id="telephone" name="telephone" th:value="${user.telephone}">
-            </div>
-            <div class="form-group">
-                <label for="description">Описание:</label>
-                <textarea id="description" name="description" rows="4" th:text="${user.description}"></textarea>
-            </div>
-            <button type="submit">Сохранить изменения</button>
-        </form>
-        <div th:if="${successMessage}" class="success-message">
-            <p th:text="${successMessage}"></p>
+            <button class="security-button" onclick="window.location.href='/profile/security'">Безопасность</button>
         </div>
-        <button class="security-button" onclick="window.location.href='/profile/security'">Безопасность</button>
+        <div th:if="!${isCurrentUser}">
+            <p th:text="${user.description}"></p>
+            <button th:attr="onclick='window.location.href=\'/profile/' + ${user.userId} + '/favorites\''">Просмотреть избранные вакансии</button>
+        </div>
     </div>
     <script>
         document.getElementById('user-image').onerror = function() {

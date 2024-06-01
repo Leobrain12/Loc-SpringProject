@@ -17,4 +17,5 @@ public interface UserService {
     void addFavoriteVacancy(User user, Long vacancyId);
     Set<Vacancy> getFavoriteVacancies(User user);
     void removeFavoriteVacancy(User user, Long vacancyId);
+    List<User> findAllUsersExcept(String email);
 }

@@ -71,5 +71,11 @@ public class UserServiceIMPL implements UserService {
         throw new UnsupportedOperationException("Unimplemented method 'removeFavoriteVacancy'");
     }
 
+    @Override
+    public List<User> findAllUsersExcept(String email) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findAllUsersExcept'");
+    }
+
 
 }

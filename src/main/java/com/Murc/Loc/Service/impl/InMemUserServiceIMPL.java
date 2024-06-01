@@ -3,6 +3,7 @@ package com.Murc.Loc.Service.impl;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -93,4 +94,10 @@ public class InMemUserServiceIMPL implements UserService {
         user.getFavoriteVacancies().remove(vacancy);
         repository.save(user);
     }
+    @Override
+    public List<User> findAllUsersExcept(String email) {
+        return repository.findAll().stream()
+            .filter(user -> !user.getEmail().equals(email))
+            .collect(Collectors.toList());
+        }
 }
