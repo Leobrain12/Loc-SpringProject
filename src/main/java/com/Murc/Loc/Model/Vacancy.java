@@ -25,4 +25,7 @@ public class Vacancy {
     private Long zoneId;
     @ElementCollection
     private List<String> skills;
+    private String salary;
+    private String experience;
+    private int age;
 }

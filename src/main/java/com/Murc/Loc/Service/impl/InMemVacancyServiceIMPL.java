@@ -46,5 +46,4 @@ public class InMemVacancyServiceIMPL implements VacancyService {
     public Vacancy findById(Long Id) {
         return repository.findByVacancyId(Id);
     }
-    
 }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить вакансию</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        h1 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        .menu {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .menu button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .menu button:hover {
+            background-color: #0056b3;
+        }
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+        .form-container input,
+        .form-container textarea,
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            box-sizing: border-box;
+        }
+        .form-container textarea {
+            resize: vertical;
+        }
+        .form-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #495057;
+        }
+        .form-container .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <button onclick="window.location.href='/profile'">Профиль</button>
+        <button onclick="window.location.href='/profile/favorites'">Избранные вакансии</button>
+        <button onclick="window.location.href='/vacancies'">Вакансии</button>
+        <button onclick="window.location.href='/users'">Все пользователи</button>
+        <button onclick="window.location.href='/logout'">Выйти</button>
+    </div>
+    <div class="form-container">
+        <h1>Добавить вакансию</h1>
+        <form th:action="@{/vacancies/add}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Название</label>
+                <input type="text" id="name" name="name" placeholder="Название" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Описание</label>
+                <textarea id="description" name="description" placeholder="Описание" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skills">Навыки</label>
+                <input type="text" id="skills" name="skills" placeholder="Навыки (через запятую)" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Изображение</label>
+                <input type="file" id="image" name="image">
+            </div>
+            <button type="submit">Добавить вакансию</button>
+        </form>
+    </div>
+</body>
+</html>

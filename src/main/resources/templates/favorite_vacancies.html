@@ -79,7 +79,7 @@
     <h1>Избранные вакансии</h1>
     <div class="vacancies-container">
         <div class="vacancy-card" th:each="vacancy : ${favoriteVacancies}">
-            <img th:src="@{'/uploads/' + ${vacancy.image}}" alt="Vacancy image">
+            <img th:src="${vacancy.image != null ? '/uploads/' + vacancy.image : '/images/default-avatar.png'}" alt="Vacancy image">
             <h2 th:text="${vacancy.name}"></h2>
             <p th:text="${vacancy.description}"></p>
             <p>Навыки: <span th:each="skill : ${vacancy.skills}" th:text="${skill}">Skill</span></p>

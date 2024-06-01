@@ -6,7 +6,7 @@ import com.Murc.Loc.Model.*;
 import java.util.Optional;
 
 
-public interface UserRepository extends JpaRepository<User,Long> {
+public interface    UserRepository extends JpaRepository<User,Long> {
     void deleteById(Long userId);
     User findByUserId(Long userId);
     Optional<User> findByEmail(String email);
