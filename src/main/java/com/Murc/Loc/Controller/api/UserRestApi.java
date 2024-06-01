@@ -20,24 +20,30 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class UserRestApi {
     private final UserService service;
+
     @GetMapping
-    public List<User> findAllUser(){
+    public List<User> findAllUser() {
         return service.findAllUser();
     }
+
     @PostMapping("save_user")
-    public User saveUser(@RequestBody User newUser){
+    public User saveUser(@RequestBody User newUser) {
         return service.saveUser(newUser);
     }
+
     @GetMapping("/{userId}")
-    public User findById(@PathVariable Long userId){
+    public User findById(@PathVariable Long userId) {
         return service.findById(userId);
     }
+
     @PutMapping("update_user/{userId}")
-    public User updateUser(@RequestBody User user, @PathVariable Long userId){
+    public User updateUser(@RequestBody User user, @PathVariable Long userId) {
         return service.updateUser(user, userId);
     }
+
     @DeleteMapping("delete_user/{userId}")
-    public void deleteUser(@PathVariable Long userId){
+    public void deleteUser(@PathVariable Long userId) {
         service.deleteUser(userId);
     }
 }
+
