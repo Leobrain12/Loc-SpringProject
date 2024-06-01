@@ -34,6 +34,7 @@ public class UserProfileWebController {
             @RequestParam String firstName,
             @RequestParam String lastName,
             @RequestParam String telephone,
+            @RequestParam String description,
             Model model) {
 
         User user = userService.findByEmail(userDetails.getUsername())
@@ -42,6 +43,7 @@ public class UserProfileWebController {
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setTelephone(telephone);
+        user.setDescription(description);
 
         userService.updateUser(user, user.getUserId());
 
@@ -99,5 +101,6 @@ public class UserProfileWebController {
         return "favorite_vacancies";
     }
 }
+
 
 
