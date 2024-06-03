@@ -8,17 +8,13 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
 @Controller
 @RequiredArgsConstructor
 public class UserProfileWebController {
-
     private final UserService userService;
 
     @GetMapping("/profile")
@@ -26,6 +22,7 @@ public class UserProfileWebController {
         User user = userService.findByEmail(userDetails.getUsername())
                 .orElseThrow(() -> new RuntimeException("User not found"));
         model.addAttribute("user", user);
+        model.addAttribute("isCurrentUser", true);
         return "profile";
     }
 
@@ -37,17 +34,13 @@ public class UserProfileWebController {
             @RequestParam String telephone,
             @RequestParam String description,
             Model model) {
-
         User user = userService.findByEmail(userDetails.getUsername())
                 .orElseThrow(() -> new RuntimeException("User not found"));
-
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setTelephone(telephone);
         user.setDescription(description);
-
         userService.updateUser(user, user.getUserId());
-
         model.addAttribute("user", user);
         model.addAttribute("successMessage", "Profile updated successfully");
         return "profile";
@@ -69,25 +62,19 @@ public class UserProfileWebController {
             @RequestParam String newEmail,
             @RequestParam String confirmEmail,
             Model model) {
-
         if (!newPassword.equals(confirmPassword)) {
             model.addAttribute("errorMessage", "Passwords do not match");
             return "security";
         }
-
         if (!newEmail.equals(confirmEmail)) {
             model.addAttribute("errorMessage", "Emails do not match");
             return "security";
         }
-
         User user = userService.findByEmail(userDetails.getUsername())
                 .orElseThrow(() -> new RuntimeException("User not found"));
-
         user.setPassword(newPassword);
         user.setEmail(newEmail);
-
         userService.updateUser(user, user.getUserId());
-
         model.addAttribute("user", user);
         model.addAttribute("successMessage", "Security settings updated successfully");
         return "security";
@@ -99,6 +86,7 @@ public class UserProfileWebController {
                 .orElseThrow(() -> new RuntimeException("User not found"));
         Set<Vacancy> favoriteVacancies = user.getFavoriteVacancies();
         model.addAttribute("favoriteVacancies", favoriteVacancies);
+        model.addAttribute("isCurrentUser", true);
         return "favorite_vacancies";
     }
 
@@ -112,14 +100,13 @@ public class UserProfileWebController {
     }
 
     @GetMapping("/profile/{userId}/favorites")
-    public String viewUserFavorites(@PathVariable Long userId, Model model) {
+    public String viewUserFavorites(@PathVariable Long userId, @AuthenticationPrincipal UserDetails currentUser, Model model) {
         User user = userService.findById(userId);
+        model.addAttribute("user", user);
+        boolean isCurrentUser = user.getEmail().equals(currentUser.getUsername());
+        model.addAttribute("isCurrentUser", isCurrentUser);
         Set<Vacancy> favoriteVacancies = userService.getFavoriteVacancies(user);
         model.addAttribute("favoriteVacancies", favoriteVacancies);
-        model.addAttribute("user", user);
         return "favorite_vacancies";
     }
 }
-
-
-

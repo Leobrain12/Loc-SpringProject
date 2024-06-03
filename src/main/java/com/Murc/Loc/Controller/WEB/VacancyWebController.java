@@ -25,6 +25,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -149,5 +151,43 @@ public class VacancyWebController {
         Vacancy vacancy = vacancyService.findById(vacancyId);
         model.addAttribute("vacancy", vacancy);
         return "vacancy_details";
+    }
+    @GetMapping("/vacancies/edit/{vacancyId}")
+    public String showEditVacancyForm(@PathVariable Long vacancyId, Model model) {
+        Vacancy vacancy = vacancyService.findById(vacancyId);
+        model.addAttribute("vacancy", vacancy);
+        return "edit_vacancy";
+    }
+    @PostMapping("/vacancies/update/{vacancyId}")
+    public String updateVacancy(
+            @PathVariable Long vacancyId,
+            @RequestParam("name") String name,
+            @RequestParam("description") String description,
+            @RequestParam("shortDescription") String shortDescription,
+            @RequestParam("skills") String skills,
+            @RequestParam("salary") String salary,
+            @RequestParam("experience") String experience,
+            @RequestParam("age") int age,
+            @RequestParam("image") MultipartFile image,
+            Model model) {
+
+        Vacancy existingVacancy = vacancyService.findById(vacancyId);
+
+        existingVacancy.setName(name);
+        existingVacancy.setDescription(description);
+        existingVacancy.setShortDescription(shortDescription);
+        existingVacancy.setSkills(new ArrayList<>(Arrays.asList(skills.split(","))));
+        existingVacancy.setSalary(salary);
+        existingVacancy.setExperience(experience);
+        existingVacancy.setAge(age);
+
+        if (!image.isEmpty()) {
+            String fileName = saveFile(image);
+            existingVacancy.setImage(fileName);
+        }
+
+        vacancyService.updateVacancy(existingVacancy, vacancyId);
+
+        return "redirect:/vacancies";
     }
 }

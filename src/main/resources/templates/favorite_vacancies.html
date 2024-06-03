@@ -14,13 +14,32 @@
             align-items: center;
             flex-direction: column;
         }
+        .menu {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .menu button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .menu button:hover {
+            background-color: #0056b3;
+        }
         .favorites-container {
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin: 20px;
             padding: 20px;
-            width: 400px;
+            width: 600px;
             text-align: center;
         }
         .vacancy {
@@ -39,6 +58,23 @@
             margin: 5px 0;
             color: #666;
         }
+        .vacancy-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .vacancy button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .vacancy button:hover {
+            background-color: #0056b3;
+        }
         .back-button {
             margin-top: 20px;
             padding: 10px 20px;
@@ -54,6 +90,13 @@
     </style>
 </head>
 <body>
+    <div class="menu">
+        <button onclick="window.location.href='/profile'">Профиль</button>
+        <button onclick="window.location.href='/profile/favorites'">Избранные вакансии</button>
+        <button onclick="window.location.href='/vacancies'">Вакансии</button>
+        <button onclick="window.location.href='/users'">Все пользователи</button>
+        <button onclick="window.location.href='/logout'">Выйти</button>
+    </div>
     <div class="favorites-container">
         <h2>Избранные вакансии</h2>
         <div th:if="${favoriteVacancies.isEmpty()}">
@@ -63,14 +106,25 @@
             <div class="vacancy">
                 <h3 th:text="${vacancy.name}"></h3>
                 <p th:text="${vacancy.description}"></p>
+                <div class="vacancy-buttons">
+                    <button th:onclick="'window.location.href=\'/vacancy/details/' + ${vacancy.vacancyId} + '\''">Посмотреть детали</button>
+                    <button th:if="${isCurrentUser}" th:onclick="'removeFavorite(' + ${vacancy.vacancyId} + ')'">Удалить из избранного</button>
+                </div>
             </div>
         </div>
         <button class="back-button" onclick="window.history.back()">Назад</button>
     </div>
     <script>
-        document.getElementById('user-image').onerror = function() {
-            this.onerror = null;
-            this.src = '/images/default-avatar.png';
+        function removeFavorite(vacancyId) {
+            fetch(`/api/favorites/remove/${vacancyId}`, {
+                method: 'DELETE'
+            }).then(response => {
+                if (response.ok) {
+                    window.location.reload();
+                } else {
+                    alert('Ошибка при удалении вакансии из избранного');
+                }
+            });
         }
     </script>
 </body>

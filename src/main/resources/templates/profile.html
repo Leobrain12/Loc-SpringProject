@@ -119,7 +119,9 @@
     <div class="profile-container">
         <img id="user-image" th:src="@{'/uploads/' + ${user.image}}" alt="User image">
         <h2 th:text="${user.firstName} + ' ' + ${user.lastName}"></h2>
-        <p th:text="${user.email}"></p>
+        <p th:text="'Email: ' + ${user.email}"></p>
+        <p th:text="'Телефон: ' + ${user.telephone}"></p>
+        <p th:text="'Описание: ' + ${user.description}"></p>
         <div th:if="${isCurrentUser}">
             <form action="/profile/update" method="post">
                 <div class="form-group">
@@ -146,7 +148,6 @@
             <button class="security-button" onclick="window.location.href='/profile/security'">Безопасность</button>
         </div>
         <div th:if="!${isCurrentUser}">
-            <p th:text="${user.description}"></p>
             <button th:attr="onclick='window.location.href=\'/profile/' + ${user.userId} + '/favorites\''">Просмотреть избранные вакансии</button>
         </div>
     </div>

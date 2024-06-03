@@ -16,7 +16,7 @@ public class JwtService {
 
     private final String SECRET_KEY = "mysecretkeymysecretkeymysecretkey"; // Должен быть не короче 256 бит
 
-    private Key getSigningKey() {
+    Key getSigningKey() {
         byte[] keyBytes = SECRET_KEY.getBytes();
         return Keys.hmacShaKeyFor(keyBytes);
     }
@@ -56,7 +56,7 @@ public class JwtService {
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
-    private Boolean isTokenExpired(String token) { return extractExpiration(token).before(new Date()); }
+    Boolean isTokenExpired(String token) { return extractExpiration(token).before(new Date()); }
 
     private Date extractExpiration(String token) { return extractClaim(token, Claims::getExpiration); }
 }

@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.Murc.Loc.Model.Vacancy;
@@ -37,8 +38,9 @@ public class VacancyRestApi {
     }
 
     @PutMapping("/update/{vacancyId}")
-    public Vacancy updateVacancy(@RequestBody Vacancy vacancy, @PathVariable Long vacancyId) {
-        return vacancyService.updateVacancy(vacancy, vacancyId);
+    public ResponseEntity<Vacancy> updateVacancy(@PathVariable Long vacancyId, @RequestBody Vacancy updatedVacancy) {
+        Vacancy vacancy = vacancyService.updateVacancy(updatedVacancy, vacancyId);
+        return ResponseEntity.ok(vacancy);
     }
 
     @DeleteMapping("/delete/{vacancyId}")

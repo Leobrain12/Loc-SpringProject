@@ -1,5 +1,6 @@
 package com.Murc.Loc.Service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.context.annotation.Primary;
@@ -35,8 +36,19 @@ public class InMemVacancyServiceIMPL implements VacancyService {
 
     @Transactional
     @Override
-    public Vacancy updateVacancy(Vacancy vacancy, Long Id) {
-        return repository.save(vacancy);
+    public Vacancy updateVacancy( Vacancy updatedVacancy, Long vacancyId) {
+        Vacancy existingVacancy = repository.findById(vacancyId).orElseThrow(() -> new RuntimeException("Vacancy not found"));
+
+        existingVacancy.setName(updatedVacancy.getName());
+        existingVacancy.setDescription(updatedVacancy.getDescription());
+        existingVacancy.setShortDescription(updatedVacancy.getShortDescription());
+        existingVacancy.setSkills(new ArrayList<>(updatedVacancy.getSkills()));
+        existingVacancy.setSalary(updatedVacancy.getSalary());
+        existingVacancy.setExperience(updatedVacancy.getExperience());
+        existingVacancy.setAge(updatedVacancy.getAge());
+        existingVacancy.setImage(updatedVacancy.getImage());
+
+        return repository.save(existingVacancy);
     }
 
     @Transactional

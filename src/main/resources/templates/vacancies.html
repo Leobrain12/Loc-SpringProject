@@ -202,6 +202,7 @@
             <p>Навыки: <span th:text="${#strings.arrayJoin(vacancy.skills, ', ')}"></span></p>
             <button th:attr="onclick=|deleteVacancy(${vacancy.vacancyId})|">Удалить</button>
             <button th:attr="onclick=|window.location.href='/vacancy/details/' + ${vacancy.vacancyId}|">Посмотреть детали</button>
+            <button th:attr="onclick=|window.location.href='/vacancies/edit/' + ${vacancy.vacancyId}|">Изменить</button>
             <button th:attr="onclick=|addToFavorites(${vacancy.vacancyId})|">Добавить в избранное</button>
         </div>
     </div>
