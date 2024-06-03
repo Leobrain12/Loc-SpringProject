@@ -92,15 +92,15 @@
 <body>
     <div class="menu">
         <button onclick="window.location.href='/profile'">Профиль</button>
-        <button onclick="window.location.href='/profile/favorites'">Избранные вакансии</button>
-        <button onclick="window.location.href='/vacancies'">Вакансии</button>
+        <button onclick="window.location.href='/profile/favorites'">Избранные Резюме</button>
+        <button onclick="window.location.href='/vacancies'">Резюме</button>
         <button onclick="window.location.href='/users'">Все пользователи</button>
         <button onclick="window.location.href='/logout'">Выйти</button>
     </div>
     <div class="favorites-container">
-        <h2>Избранные вакансии</h2>
+        <h2>Избранные Резюме</h2>
         <div th:if="${favoriteVacancies.isEmpty()}">
-            <p>Нет избранных вакансий.</p>
+            <p>Нет избранных Резюме.</p>
         </div>
         <div th:each="vacancy : ${favoriteVacancies}">
             <div class="vacancy">
@@ -122,7 +122,7 @@
                 if (response.ok) {
                     window.location.reload();
                 } else {
-                    alert('Ошибка при удалении вакансии из избранного');
+                    alert('Ошибка при удалении Резюме из избранного');
                 }
             });
         }

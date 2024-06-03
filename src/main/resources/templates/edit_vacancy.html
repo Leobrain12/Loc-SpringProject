@@ -72,7 +72,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Редактировать вакансию</h1>
+        <h1>Редактировать Резюме</h1>
         <form th:action="@{'/vacancies/update/' + ${vacancy.vacancyId}}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_method" value="PUT"/>
             <div class="form-group">

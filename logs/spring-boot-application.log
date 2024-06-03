@@ -1,0 +1,144 @@
+2024-06-03T13:17:56.753+03:00  INFO 25492 --- [restartedMain] com.Murc.Loc.LocApplication              : Starting LocApplication using Java 19.0.1 with PID 25492 (C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject\target\classes started by danii in C:\Users\danii\Рабочий стол\Mrical\Loc-SpringProject)
+2024-06-03T13:17:56.755+03:00 DEBUG 25492 --- [restartedMain] com.Murc.Loc.LocApplication              : Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-03T13:17:56.756+03:00  INFO 25492 --- [restartedMain] com.Murc.Loc.LocApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-06-03T13:17:56.815+03:00  INFO 25492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-03T13:17:56.816+03:00  INFO 25492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-03T13:17:57.750+03:00  INFO 25492 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-03T13:17:57.844+03:00  INFO 25492 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 2 JPA repository interfaces.
+2024-06-03T13:17:58.733+03:00  INFO 25492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-03T13:17:58.752+03:00  INFO 25492 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-03T13:17:58.753+03:00  INFO 25492 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-03T13:17:58.815+03:00  INFO 25492 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-03T13:17:58.817+03:00  INFO 25492 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2000 ms
+2024-06-03T13:17:58.999+03:00  INFO 25492 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-03T13:17:59.085+03:00  INFO 25492 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-03T13:17:59.152+03:00  INFO 25492 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-03T13:17:59.523+03:00  INFO 25492 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-03T13:17:59.563+03:00  INFO 25492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-03T13:17:59.813+03:00  INFO 25492 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ee585f6
+2024-06-03T13:17:59.815+03:00  INFO 25492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-03T13:17:59.881+03:00  WARN 25492 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-03T13:18:01.092+03:00  INFO 25492 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-03T13:18:01.244+03:00  INFO 25492 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03T13:18:01.605+03:00 DEBUG 25492 --- [restartedMain] c.M.Loc.Config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-06-03T13:18:01.671+03:00  INFO 25492 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-03T13:18:01.673+03:00  WARN 25492 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-03T13:18:01.792+03:00  WARN 25492 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-03T13:18:02.157+03:00  INFO 25492 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7669730a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79798bdb, org.springframework.security.web.context.SecurityContextHolderFilter@1b37a61e, org.springframework.security.web.header.HeaderWriterFilter@10a6e15c, org.springframework.web.filter.CorsFilter@245b9875, org.springframework.security.web.authentication.logout.LogoutFilter@4af5a8ac, com.Murc.Loc.Config.JwtAuthenticationFilter@72589e9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40f312a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@652c9e35, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4de5b1b7, org.springframework.security.web.session.SessionManagementFilter@7d7f3e15, org.springframework.security.web.access.ExceptionTranslationFilter@768e7165, org.springframework.security.web.access.intercept.AuthorizationFilter@2d145165]
+2024-06-03T13:18:02.450+03:00  INFO 25492 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-03T13:18:02.485+03:00  INFO 25492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-03T13:18:02.495+03:00  INFO 25492 --- [restartedMain] com.Murc.Loc.LocApplication              : Started LocApplication in 6.269 seconds (process running for 6.955)
+2024-06-03T13:18:02.579+03:00  INFO 25492 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-03T13:18:02.580+03:00  INFO 25492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-03T13:18:02.581+03:00  INFO 25492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-03T13:18:02.599+03:00 DEBUG 25492 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /profile/favorites
+2024-06-03T13:18:02.664+03:00  WARN 25492 --- [http-nio-8080-exec-1] c.M.Loc.Config.JwtAuthenticationFilter   : Expired JWT token: JWT expired at 2024-06-03T05:36:39Z. Current time: 2024-06-03T10:18:02Z, a difference of 16883662 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-06-03T13:18:02.666+03:00 DEBUG 25492 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:02.667+03:00 DEBUG 25492 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:02.675+03:00 DEBUG 25492 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:02.676+03:00 DEBUG 25492 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:02.676+03:00 DEBUG 25492 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:04.579+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /profile/favorites
+2024-06-03T13:18:04.581+03:00  WARN 25492 --- [http-nio-8080-exec-2] c.M.Loc.Config.JwtAuthenticationFilter   : Expired JWT token: JWT expired at 2024-06-03T05:36:39Z. Current time: 2024-06-03T10:18:04Z, a difference of 16885581 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-06-03T13:18:04.582+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:04.583+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:04.584+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:04.584+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:04.584+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:10.286+03:00 DEBUG 25492 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /login
+2024-06-03T13:18:10.289+03:00  WARN 25492 --- [http-nio-8080-exec-3] c.M.Loc.Config.JwtAuthenticationFilter   : Expired JWT token: JWT expired at 2024-06-03T05:36:39Z. Current time: 2024-06-03T10:18:10Z, a difference of 16891288 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-06-03T13:18:10.289+03:00 DEBUG 25492 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:10.290+03:00 DEBUG 25492 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /login
+2024-06-03T13:18:10.546+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-03T13:18:10.548+03:00  WARN 25492 --- [http-nio-8080-exec-4] c.M.Loc.Config.JwtAuthenticationFilter   : Expired JWT token: JWT expired at 2024-06-03T05:36:39Z. Current time: 2024-06-03T10:18:10Z, a difference of 16891547 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-06-03T13:18:10.548+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:10.548+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:10.549+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:10.550+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:10.550+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:16.150+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /login
+2024-06-03T13:18:16.157+03:00  WARN 25492 --- [http-nio-8080-exec-7] c.M.Loc.Config.JwtAuthenticationFilter   : Expired JWT token: JWT expired at 2024-06-03T05:36:39Z. Current time: 2024-06-03T10:18:16Z, a difference of 16897157 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-06-03T13:18:16.157+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:16.158+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /login
+2024-06-03T13:18:16.177+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] c.M.L.Controller.WEB.LoginWebController  : Attempting to authenticate user daniilzelen@gmail.com
+2024-06-03T13:18:16.467+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] c.Murc.Loc.Config.ApplicationConfig$1    : Failed to authenticate since password does not match stored value
+2024-06-03T13:18:16.468+03:00 ERROR 25492 --- [http-nio-8080-exec-7] c.M.L.Controller.WEB.LoginWebController  : Authentication failed for user daniilzelen@gmail.com. Error: Bad credentials
+2024-06-03T13:18:16.542+03:00 DEBUG 25492 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-03T13:18:16.544+03:00  WARN 25492 --- [http-nio-8080-exec-8] c.M.Loc.Config.JwtAuthenticationFilter   : Expired JWT token: JWT expired at 2024-06-03T05:36:39Z. Current time: 2024-06-03T10:18:16Z, a difference of 16897544 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-06-03T13:18:16.544+03:00 DEBUG 25492 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:16.545+03:00 DEBUG 25492 --- [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:16.546+03:00 DEBUG 25492 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:16.546+03:00 DEBUG 25492 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:16.546+03:00 DEBUG 25492 --- [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:24.041+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /login
+2024-06-03T13:18:24.045+03:00  WARN 25492 --- [http-nio-8080-exec-10] c.M.Loc.Config.JwtAuthenticationFilter   : Expired JWT token: JWT expired at 2024-06-03T05:36:39Z. Current time: 2024-06-03T10:18:24Z, a difference of 16905045 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-06-03T13:18:24.045+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:24.046+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /login
+2024-06-03T13:18:24.046+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] c.M.L.Controller.WEB.LoginWebController  : Attempting to authenticate user daniilzelen@gmail.com
+2024-06-03T13:18:24.113+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] c.Murc.Loc.Config.ApplicationConfig$1    : Authenticated user
+2024-06-03T13:18:24.147+03:00  INFO 25492 --- [http-nio-8080-exec-10] c.M.L.Controller.WEB.LoginWebController  : User daniilzelen@gmail.com authenticated successfully
+2024-06-03T13:18:24.156+03:00 DEBUG 25492 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /users
+2024-06-03T13:18:24.192+03:00 DEBUG 25492 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /users
+2024-06-03T13:18:24.253+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /uploads/null
+2024-06-03T13:18:24.261+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /uploads/null
+2024-06-03T13:18:24.270+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:24.270+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:24.271+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:24.276+03:00 DEBUG 25492 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-03T13:18:24.284+03:00 DEBUG 25492 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-03T13:18:24.296+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-03T13:18:24.307+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-03T13:18:24.310+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:24.310+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:24.311+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:25.568+03:00 DEBUG 25492 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /profile
+2024-06-03T13:18:25.576+03:00 DEBUG 25492 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /profile
+2024-06-03T13:18:25.618+03:00 DEBUG 25492 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /uploads/null
+2024-06-03T13:18:25.629+03:00 DEBUG 25492 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /uploads/null
+2024-06-03T13:18:25.632+03:00 DEBUG 25492 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:25.633+03:00 DEBUG 25492 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:25.633+03:00 DEBUG 25492 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:25.638+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-03T13:18:25.647+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-03T13:18:25.656+03:00 DEBUG 25492 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-03T13:18:25.665+03:00 DEBUG 25492 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-03T13:18:25.667+03:00 DEBUG 25492 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:25.668+03:00 DEBUG 25492 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:25.668+03:00 DEBUG 25492 --- [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:26.192+03:00 DEBUG 25492 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /profile/favorites
+2024-06-03T13:18:26.199+03:00 DEBUG 25492 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /profile/favorites
+2024-06-03T13:18:26.231+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-03T13:18:26.241+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-03T13:18:26.242+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:26.242+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:26.243+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:27.343+03:00 DEBUG 25492 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-03T13:18:27.351+03:00 DEBUG 25492 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-03T13:18:27.417+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /images/default-avatar.png
+2024-06-03T13:18:27.427+03:00 DEBUG 25492 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /images/default-avatar.png
+2024-06-03T13:18:27.435+03:00 DEBUG 25492 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-03T13:18:27.444+03:00 DEBUG 25492 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-03T13:18:27.446+03:00 DEBUG 25492 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:27.446+03:00 DEBUG 25492 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:27.448+03:00 DEBUG 25492 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:28.663+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /vacancies/edit/9
+2024-06-03T13:18:28.671+03:00 DEBUG 25492 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /vacancies/edit/9
+2024-06-03T13:18:28.716+03:00 DEBUG 25492 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-03T13:18:28.726+03:00 DEBUG 25492 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-03T13:18:28.728+03:00 DEBUG 25492 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:28.729+03:00 DEBUG 25492 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:28.729+03:00 DEBUG 25492 --- [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:30.108+03:00 DEBUG 25492 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /vacancies
+2024-06-03T13:18:30.117+03:00 DEBUG 25492 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /vacancies
+2024-06-03T13:18:30.152+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-03T13:18:30.162+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-03T13:18:30.177+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:30.178+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:30.178+03:00 DEBUG 25492 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-06-03T13:18:31.529+03:00 DEBUG 25492 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /profile/favorites
+2024-06-03T13:18:31.536+03:00 DEBUG 25492 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /profile/favorites
+2024-06-03T13:18:31.559+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-06-03T13:18:31.568+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-06-03T13:18:31.570+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-06-03T13:18:31.570+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-06-03T13:18:31.572+03:00 DEBUG 25492 --- [http-nio-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
